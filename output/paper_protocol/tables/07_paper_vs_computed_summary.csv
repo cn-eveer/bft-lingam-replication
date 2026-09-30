@@ -1,7 +1,7 @@
 Artifact,Matched,Total
-Table 4 (Product),25,48
-Table 5 (Core),27,48
-Table 6 (vs macro-F1),4,8
-Table 6 (vs accuracy),5,8
-Table 8,0,6
-Table 9,8,14
+Table 4 (Product),48,48
+Table 5 (Core),48,48
+Table 6 (vs macro-F1),8,8
+Table 6 (vs accuracy),8,8
+Table 8,6,6
+Table 9,14,14

@@ -204,30 +204,30 @@ Table 3,Severity class 1,W-/N,W-/N,output/tables,True
 Table 3,Severity class 2,N,N,output/tables,True
 Table 3,Severity class 3,W-,W-,output/tables,True
 Table 3,Severity class 4,S-,S-,output/tables,True
-Table performance (P/R/F1),Product RF Precision class 1,0.90,0.866,output/paper_protocol,False
-Table performance (P/R/F1),Product RF Recall class 1,0.75,0.728,output/paper_protocol,False
-Table performance (P/R/F1),Product RF F1 class 1,0.82,0.791,output/paper_protocol,False
-Table performance (P/R/F1),Product RF Precision class 2,0.62,0.671,output/paper_protocol,False
-Table performance (P/R/F1),Product RF Recall class 2,0.72,0.643,output/paper_protocol,False
-Table performance (P/R/F1),Product RF F1 class 2,0.67,0.657,output/paper_protocol,False
-Table performance (P/R/F1),Product RF Precision class 3,0.75,0.687,output/paper_protocol,False
-Table performance (P/R/F1),Product RF Recall class 3,0.68,0.76,output/paper_protocol,False
-Table performance (P/R/F1),Product RF F1 class 3,0.71,0.722,output/paper_protocol,False
-Table performance (P/R/F1),Product RF Precision class 4,0.80,0.811,output/paper_protocol,False
-Table performance (P/R/F1),Product RF Recall class 4,0.92,0.911,output/paper_protocol,False
+Table performance (P/R/F1),Product RF Precision class 1,0.87,0.866,output/paper_protocol,True
+Table performance (P/R/F1),Product RF Recall class 1,0.73,0.728,output/paper_protocol,True
+Table performance (P/R/F1),Product RF F1 class 1,0.79,0.791,output/paper_protocol,True
+Table performance (P/R/F1),Product RF Precision class 2,0.67,0.671,output/paper_protocol,True
+Table performance (P/R/F1),Product RF Recall class 2,0.64,0.643,output/paper_protocol,True
+Table performance (P/R/F1),Product RF F1 class 2,0.66,0.657,output/paper_protocol,True
+Table performance (P/R/F1),Product RF Precision class 3,0.69,0.687,output/paper_protocol,True
+Table performance (P/R/F1),Product RF Recall class 3,0.76,0.76,output/paper_protocol,True
+Table performance (P/R/F1),Product RF F1 class 3,0.72,0.722,output/paper_protocol,True
+Table performance (P/R/F1),Product RF Precision class 4,0.81,0.811,output/paper_protocol,True
+Table performance (P/R/F1),Product RF Recall class 4,0.91,0.911,output/paper_protocol,True
 Table performance (P/R/F1),Product RF F1 class 4,0.86,0.858,output/paper_protocol,True
-Table performance (P/R/F1),Product LR Precision class 1,0.85,0.882,output/paper_protocol,False
-Table performance (P/R/F1),Product LR Recall class 1,0.70,0.692,output/paper_protocol,False
-Table performance (P/R/F1),Product LR F1 class 1,0.77,0.776,output/paper_protocol,False
-Table performance (P/R/F1),Product LR Precision class 2,0.60,0.64,output/paper_protocol,False
-Table performance (P/R/F1),Product LR Recall class 2,0.66,0.667,output/paper_protocol,False
-Table performance (P/R/F1),Product LR F1 class 2,0.63,0.653,output/paper_protocol,False
-Table performance (P/R/F1),Product LR Precision class 3,0.70,0.803,output/paper_protocol,False
-Table performance (P/R/F1),Product LR Recall class 3,0.65,0.733,output/paper_protocol,False
-Table performance (P/R/F1),Product LR F1 class 3,0.67,0.767,output/paper_protocol,False
-Table performance (P/R/F1),Product LR Precision class 4,0.76,0.784,output/paper_protocol,False
-Table performance (P/R/F1),Product LR Recall class 4,0.88,0.994,output/paper_protocol,False
-Table performance (P/R/F1),Product LR F1 class 4,0.82,0.877,output/paper_protocol,False
+Table performance (P/R/F1),Product LR Precision class 1,0.88,0.882,output/paper_protocol,True
+Table performance (P/R/F1),Product LR Recall class 1,0.69,0.692,output/paper_protocol,True
+Table performance (P/R/F1),Product LR F1 class 1,0.78,0.776,output/paper_protocol,True
+Table performance (P/R/F1),Product LR Precision class 2,0.64,0.64,output/paper_protocol,True
+Table performance (P/R/F1),Product LR Recall class 2,0.67,0.667,output/paper_protocol,True
+Table performance (P/R/F1),Product LR F1 class 2,0.65,0.653,output/paper_protocol,True
+Table performance (P/R/F1),Product LR Precision class 3,0.80,0.803,output/paper_protocol,True
+Table performance (P/R/F1),Product LR Recall class 3,0.73,0.733,output/paper_protocol,True
+Table performance (P/R/F1),Product LR F1 class 3,0.77,0.767,output/paper_protocol,True
+Table performance (P/R/F1),Product LR Precision class 4,0.78,0.784,output/paper_protocol,True
+Table performance (P/R/F1),Product LR Recall class 4,0.99,0.994,output/paper_protocol,True
+Table performance (P/R/F1),Product LR F1 class 4,0.88,0.877,output/paper_protocol,True
 Table performance (P/R/F1),Product BN Precision class 1,1.00,1.0,output/paper_protocol,True
 Table performance (P/R/F1),Product BN Recall class 1,0.67,0.672,output/paper_protocol,True
 Table performance (P/R/F1),Product BN F1 class 1,0.80,0.804,output/paper_protocol,True
@@ -252,30 +252,30 @@ Table performance (P/R/F1),Product LiNGAM-BN F1 class 3,0.79,0.791,output/paper_
 Table performance (P/R/F1),Product LiNGAM-BN Precision class 4,0.78,0.782,output/paper_protocol,True
 Table performance (P/R/F1),Product LiNGAM-BN Recall class 4,1.00,1.0,output/paper_protocol,True
 Table performance (P/R/F1),Product LiNGAM-BN F1 class 4,0.88,0.877,output/paper_protocol,True
-Table performance (P/R/F1),Core RF Precision class 1,0.88,0.827,output/paper_protocol,False
+Table performance (P/R/F1),Core RF Precision class 1,0.83,0.827,output/paper_protocol,True
 Table performance (P/R/F1),Core RF Recall class 1,0.70,0.697,output/paper_protocol,True
-Table performance (P/R/F1),Core RF F1 class 1,0.78,0.757,output/paper_protocol,False
-Table performance (P/R/F1),Core RF Precision class 2,0.74,0.685,output/paper_protocol,False
-Table performance (P/R/F1),Core RF Recall class 2,0.75,0.69,output/paper_protocol,False
-Table performance (P/R/F1),Core RF F1 class 2,0.74,0.688,output/paper_protocol,False
-Table performance (P/R/F1),Core RF Precision class 3,0.78,0.742,output/paper_protocol,False
-Table performance (P/R/F1),Core RF Recall class 3,0.77,0.737,output/paper_protocol,False
-Table performance (P/R/F1),Core RF F1 class 3,0.77,0.74,output/paper_protocol,False
-Table performance (P/R/F1),Core RF Precision class 4,0.83,0.77,output/paper_protocol,False
-Table performance (P/R/F1),Core RF Recall class 4,0.90,0.905,output/paper_protocol,True
-Table performance (P/R/F1),Core RF F1 class 4,0.86,0.832,output/paper_protocol,False
-Table performance (P/R/F1),Core LR Precision class 1,0.81,0.94,output/paper_protocol,False
-Table performance (P/R/F1),Core LR Recall class 1,0.64,0.622,output/paper_protocol,False
-Table performance (P/R/F1),Core LR F1 class 1,0.71,0.749,output/paper_protocol,False
-Table performance (P/R/F1),Core LR Precision class 2,0.69,0.666,output/paper_protocol,False
-Table performance (P/R/F1),Core LR Recall class 2,0.67,0.78,output/paper_protocol,False
-Table performance (P/R/F1),Core LR F1 class 2,0.68,0.718,output/paper_protocol,False
-Table performance (P/R/F1),Core LR Precision class 3,0.74,0.723,output/paper_protocol,False
-Table performance (P/R/F1),Core LR Recall class 3,0.73,0.766,output/paper_protocol,False
+Table performance (P/R/F1),Core RF F1 class 1,0.76,0.757,output/paper_protocol,True
+Table performance (P/R/F1),Core RF Precision class 2,0.69,0.685,output/paper_protocol,True
+Table performance (P/R/F1),Core RF Recall class 2,0.69,0.69,output/paper_protocol,True
+Table performance (P/R/F1),Core RF F1 class 2,0.69,0.688,output/paper_protocol,True
+Table performance (P/R/F1),Core RF Precision class 3,0.74,0.742,output/paper_protocol,True
+Table performance (P/R/F1),Core RF Recall class 3,0.74,0.737,output/paper_protocol,True
+Table performance (P/R/F1),Core RF F1 class 3,0.74,0.74,output/paper_protocol,True
+Table performance (P/R/F1),Core RF Precision class 4,0.77,0.77,output/paper_protocol,True
+Table performance (P/R/F1),Core RF Recall class 4,0.91,0.905,output/paper_protocol,True
+Table performance (P/R/F1),Core RF F1 class 4,0.83,0.832,output/paper_protocol,True
+Table performance (P/R/F1),Core LR Precision class 1,0.94,0.94,output/paper_protocol,True
+Table performance (P/R/F1),Core LR Recall class 1,0.62,0.622,output/paper_protocol,True
+Table performance (P/R/F1),Core LR F1 class 1,0.75,0.749,output/paper_protocol,True
+Table performance (P/R/F1),Core LR Precision class 2,0.67,0.666,output/paper_protocol,True
+Table performance (P/R/F1),Core LR Recall class 2,0.78,0.78,output/paper_protocol,True
+Table performance (P/R/F1),Core LR F1 class 2,0.72,0.718,output/paper_protocol,True
+Table performance (P/R/F1),Core LR Precision class 3,0.72,0.723,output/paper_protocol,True
+Table performance (P/R/F1),Core LR Recall class 3,0.77,0.766,output/paper_protocol,True
 Table performance (P/R/F1),Core LR F1 class 3,0.74,0.744,output/paper_protocol,True
-Table performance (P/R/F1),Core LR Precision class 4,0.79,0.815,output/paper_protocol,False
-Table performance (P/R/F1),Core LR Recall class 4,0.85,0.898,output/paper_protocol,False
-Table performance (P/R/F1),Core LR F1 class 4,0.82,0.854,output/paper_protocol,False
+Table performance (P/R/F1),Core LR Precision class 4,0.81,0.815,output/paper_protocol,True
+Table performance (P/R/F1),Core LR Recall class 4,0.90,0.898,output/paper_protocol,True
+Table performance (P/R/F1),Core LR F1 class 4,0.85,0.854,output/paper_protocol,True
 Table performance (P/R/F1),Core BN Precision class 1,1.00,1.0,output/paper_protocol,True
 Table performance (P/R/F1),Core BN Recall class 1,0.62,0.622,output/paper_protocol,True
 Table performance (P/R/F1),Core BN F1 class 1,0.77,0.767,output/paper_protocol,True
@@ -300,121 +300,121 @@ Table performance (P/R/F1),Core LiNGAM-BN F1 class 3,0.84,0.841,output/paper_pro
 Table performance (P/R/F1),Core LiNGAM-BN Precision class 4,0.85,0.851,output/paper_protocol,True
 Table performance (P/R/F1),Core LiNGAM-BN Recall class 4,0.92,0.924,output/paper_protocol,True
 Table performance (P/R/F1),Core LiNGAM-BN F1 class 4,0.89,0.886,output/paper_protocol,True
-Table macro-F1,Core RF,0.79,0.754,output/paper_protocol,False
-Table macro-F1,Product RF,0.79,0.757,output/paper_protocol,False
-Table macro-F1,Core LR,0.76,0.766,output/paper_protocol,False
-Table macro-F1,Product LR,0.76,0.768,output/paper_protocol,False
+Table macro-F1,Core RF,0.754,0.754,output/paper_protocol,True
+Table macro-F1,Product RF,0.757,0.757,output/paper_protocol,True
+Table macro-F1,Core LR,0.766,0.766,output/paper_protocol,True
+Table macro-F1,Product LR,0.768,0.768,output/paper_protocol,True
 Table macro-F1,Core BN,0.778,0.778,output/paper_protocol,True
 Table macro-F1,Product BN,0.785,0.785,output/paper_protocol,True
 Table macro-F1,Core LiNGAM-BN,0.842,0.842,output/paper_protocol,True
 Table macro-F1,Product LiNGAM-BN,0.812,0.812,output/paper_protocol,True
-Table effect size (F1),class 1 RF Core F1,0.78,0.757,output/paper_protocol,False
-Table effect size (F1),class 1 RF Product F1,0.82,0.791,output/paper_protocol,False
-Table effect size (F1),class 1 LR Core F1,0.71,0.749,output/paper_protocol,False
-Table effect size (d),class 1 LR Core d,-0.55,-0.18,output/paper_protocol,False
-Table effect size (p),class 1 LR Core p,0.042,0.511,output/paper_protocol,False
-Table effect size (F1),class 1 LR Product F1,0.77,0.776,output/paper_protocol,False
-Table effect size (d),class 1 LR Product d,-0.44,-0.11,output/paper_protocol,False
-Table effect size (p),class 1 LR Product p,0.051,0.361,output/paper_protocol,False
+Table effect size (F1),class 1 RF Core F1,0.76,0.757,output/paper_protocol,True
+Table effect size (F1),class 1 RF Product F1,0.79,0.791,output/paper_protocol,True
+Table effect size (F1),class 1 LR Core F1,0.75,0.749,output/paper_protocol,True
+Table effect size (d),class 1 LR Core d,-0.18,-0.18,output/paper_protocol,True
+Table effect size (p),class 1 LR Core p,0.511,0.511,output/paper_protocol,True
+Table effect size (F1),class 1 LR Product F1,0.78,0.776,output/paper_protocol,True
+Table effect size (d),class 1 LR Product d,-0.11,-0.11,output/paper_protocol,True
+Table effect size (p),class 1 LR Product p,0.361,0.361,output/paper_protocol,True
 Table effect size (F1),class 1 BN Core F1,0.77,0.767,output/paper_protocol,True
-Table effect size (d),class 1 BN Core d,-0.10,0.08,output/paper_protocol,False
-Table effect size (p),class 1 BN Core p,0.45,0.37,output/paper_protocol,False
+Table effect size (d),class 1 BN Core d,0.08,0.08,output/paper_protocol,True
+Table effect size (p),class 1 BN Core p,0.370,0.37,output/paper_protocol,True
 Table effect size (F1),class 1 BN Product F1,0.80,0.804,output/paper_protocol,True
-Table effect size (d),class 1 BN Product d,-0.15,0.12,output/paper_protocol,False
-Table effect size (p),class 1 BN Product p,0.38,0.478,output/paper_protocol,False
+Table effect size (d),class 1 BN Product d,0.12,0.12,output/paper_protocol,True
+Table effect size (p),class 1 BN Product p,0.478,0.478,output/paper_protocol,True
 Table effect size (F1),class 1 LiNGAM-BN Core F1,0.84,0.838,output/paper_protocol,True
-Table effect size (d),class 1 LiNGAM-BN Core d,0.66,0.72,output/paper_protocol,False
-Table effect size (p),class 1 LiNGAM-BN Core p,0.018,0.001,output/paper_protocol,False
+Table effect size (d),class 1 LiNGAM-BN Core d,0.72,0.72,output/paper_protocol,True
+Table effect size (p),class 1 LiNGAM-BN Core p,0.001,0.001,output/paper_protocol,True
 Table effect size (F1),class 1 LiNGAM-BN Product F1,0.84,0.838,output/paper_protocol,True
-Table effect size (d),class 1 LiNGAM-BN Product d,0.48,0.42,output/paper_protocol,False
-Table effect size (p),class 1 LiNGAM-BN Product p,0.028,0.005,output/paper_protocol,False
-Table effect size (F1),class 2 RF Core F1,0.74,0.688,output/paper_protocol,False
-Table effect size (F1),class 2 RF Product F1,0.67,0.657,output/paper_protocol,False
-Table effect size (F1),class 2 LR Core F1,0.68,0.718,output/paper_protocol,False
-Table effect size (d),class 2 LR Core d,-0.28,0.46,output/paper_protocol,False
-Table effect size (p),class 2 LR Core p,0.15,0.034,output/paper_protocol,False
-Table effect size (F1),class 2 LR Product F1,0.63,0.653,output/paper_protocol,False
-Table effect size (d),class 2 LR Product d,-0.32,0.03,output/paper_protocol,False
-Table effect size (p),class 2 LR Product p,0.11,0.928,output/paper_protocol,False
+Table effect size (d),class 1 LiNGAM-BN Product d,0.42,0.42,output/paper_protocol,True
+Table effect size (p),class 1 LiNGAM-BN Product p,0.005,0.005,output/paper_protocol,True
+Table effect size (F1),class 2 RF Core F1,0.69,0.688,output/paper_protocol,True
+Table effect size (F1),class 2 RF Product F1,0.66,0.657,output/paper_protocol,True
+Table effect size (F1),class 2 LR Core F1,0.72,0.718,output/paper_protocol,True
+Table effect size (d),class 2 LR Core d,0.46,0.46,output/paper_protocol,True
+Table effect size (p),class 2 LR Core p,0.034,0.034,output/paper_protocol,True
+Table effect size (F1),class 2 LR Product F1,0.65,0.653,output/paper_protocol,True
+Table effect size (d),class 2 LR Product d,0.03,0.03,output/paper_protocol,True
+Table effect size (p),class 2 LR Product p,0.928,0.928,output/paper_protocol,True
 Table effect size (F1),class 2 BN Core F1,0.75,0.751,output/paper_protocol,True
-Table effect size (d),class 2 BN Core d,0.13,0.78,output/paper_protocol,False
-Table effect size (p),class 2 BN Core p,0.41,0.001,output/paper_protocol,False
+Table effect size (d),class 2 BN Core d,0.78,0.78,output/paper_protocol,True
+Table effect size (p),class 2 BN Core p,0.001,0.001,output/paper_protocol,True
 Table effect size (F1),class 2 BN Product F1,0.70,0.701,output/paper_protocol,True
-Table effect size (d),class 2 BN Product d,0.08,0.32,output/paper_protocol,False
-Table effect size (p),class 2 BN Product p,0.46,0.04,output/paper_protocol,False
+Table effect size (d),class 2 BN Product d,0.32,0.32,output/paper_protocol,True
+Table effect size (p),class 2 BN Product p,0.040,0.04,output/paper_protocol,True
 Table effect size (F1),class 2 LiNGAM-BN Core F1,0.80,0.804,output/paper_protocol,True
-Table effect size (d),class 2 LiNGAM-BN Core d,0.41,1.0,output/paper_protocol,False
-Table effect size (p),class 2 LiNGAM-BN Core p,0.063,0.001,output/paper_protocol,False
+Table effect size (d),class 2 LiNGAM-BN Core d,1.00,1.0,output/paper_protocol,True
+Table effect size (p),class 2 LiNGAM-BN Core p,0.001,0.001,output/paper_protocol,True
 Table effect size (F1),class 2 LiNGAM-BN Product F1,0.74,0.743,output/paper_protocol,True
-Table effect size (d),class 2 LiNGAM-BN Product d,0.36,0.61,output/paper_protocol,False
-Table effect size (p),class 2 LiNGAM-BN Product p,0.078,0.001,output/paper_protocol,False
-Table effect size (F1),class 3 RF Core F1,0.77,0.74,output/paper_protocol,False
-Table effect size (F1),class 3 RF Product F1,0.71,0.722,output/paper_protocol,False
+Table effect size (d),class 2 LiNGAM-BN Product d,0.61,0.61,output/paper_protocol,True
+Table effect size (p),class 2 LiNGAM-BN Product p,0.001,0.001,output/paper_protocol,True
+Table effect size (F1),class 3 RF Core F1,0.74,0.74,output/paper_protocol,True
+Table effect size (F1),class 3 RF Product F1,0.72,0.722,output/paper_protocol,True
 Table effect size (F1),class 3 LR Core F1,0.74,0.744,output/paper_protocol,True
-Table effect size (d),class 3 LR Core d,-0.22,0.13,output/paper_protocol,False
-Table effect size (p),class 3 LR Core p,0.22,0.765,output/paper_protocol,False
-Table effect size (F1),class 3 LR Product F1,0.67,0.767,output/paper_protocol,False
-Table effect size (d),class 3 LR Product d,-0.21,0.59,output/paper_protocol,False
-Table effect size (p),class 3 LR Product p,0.25,0.081,output/paper_protocol,False
+Table effect size (d),class 3 LR Core d,0.13,0.13,output/paper_protocol,True
+Table effect size (p),class 3 LR Core p,0.765,0.765,output/paper_protocol,True
+Table effect size (F1),class 3 LR Product F1,0.77,0.767,output/paper_protocol,True
+Table effect size (d),class 3 LR Product d,0.59,0.59,output/paper_protocol,True
+Table effect size (p),class 3 LR Product p,0.081,0.081,output/paper_protocol,True
 Table effect size (F1),class 3 BN Core F1,0.77,0.766,output/paper_protocol,True
-Table effect size (d),class 3 BN Core d,0.01,0.32,output/paper_protocol,False
-Table effect size (p),class 3 BN Core p,0.50,0.07,output/paper_protocol,False
+Table effect size (d),class 3 BN Core d,0.32,0.32,output/paper_protocol,True
+Table effect size (p),class 3 BN Core p,0.070,0.07,output/paper_protocol,True
 Table effect size (F1),class 3 BN Product F1,0.76,0.763,output/paper_protocol,True
-Table effect size (d),class 3 BN Product d,0.28,0.56,output/paper_protocol,False
-Table effect size (p),class 3 BN Product p,0.14,0.081,output/paper_protocol,False
+Table effect size (d),class 3 BN Product d,0.56,0.56,output/paper_protocol,True
+Table effect size (p),class 3 BN Product p,0.081,0.081,output/paper_protocol,True
 Table effect size (F1),class 3 LiNGAM-BN Core F1,0.84,0.841,output/paper_protocol,True
-Table effect size (d),class 3 LiNGAM-BN Core d,0.45,1.0,output/paper_protocol,False
-Table effect size (p),class 3 LiNGAM-BN Core p,0.072,0.001,output/paper_protocol,False
+Table effect size (d),class 3 LiNGAM-BN Core d,1.00,1.0,output/paper_protocol,True
+Table effect size (p),class 3 LiNGAM-BN Core p,0.001,0.001,output/paper_protocol,True
 Table effect size (F1),class 3 LiNGAM-BN Product F1,0.79,0.791,output/paper_protocol,True
-Table effect size (d),class 3 LiNGAM-BN Product d,0.42,0.54,output/paper_protocol,False
-Table effect size (p),class 3 LiNGAM-BN Product p,0.069,0.008,output/paper_protocol,False
-Table effect size (F1),class 4 RF Core F1,0.86,0.832,output/paper_protocol,False
+Table effect size (d),class 3 LiNGAM-BN Product d,0.54,0.54,output/paper_protocol,True
+Table effect size (p),class 3 LiNGAM-BN Product p,0.008,0.008,output/paper_protocol,True
+Table effect size (F1),class 4 RF Core F1,0.83,0.832,output/paper_protocol,True
 Table effect size (F1),class 4 RF Product F1,0.86,0.858,output/paper_protocol,True
-Table effect size (F1),class 4 LR Core F1,0.82,0.854,output/paper_protocol,False
-Table effect size (d),class 4 LR Core d,-0.25,0.32,output/paper_protocol,False
-Table effect size (p),class 4 LR Core p,0.19,0.065,output/paper_protocol,False
-Table effect size (F1),class 4 LR Product F1,0.82,0.877,output/paper_protocol,False
-Table effect size (d),class 4 LR Product d,-0.31,0.23,output/paper_protocol,False
-Table effect size (p),class 4 LR Product p,0.11,0.199,output/paper_protocol,False
+Table effect size (F1),class 4 LR Core F1,0.85,0.854,output/paper_protocol,True
+Table effect size (d),class 4 LR Core d,0.32,0.32,output/paper_protocol,True
+Table effect size (p),class 4 LR Core p,0.065,0.065,output/paper_protocol,True
+Table effect size (F1),class 4 LR Product F1,0.88,0.877,output/paper_protocol,True
+Table effect size (d),class 4 LR Product d,0.23,0.23,output/paper_protocol,True
+Table effect size (p),class 4 LR Product p,0.199,0.199,output/paper_protocol,True
 Table effect size (F1),class 4 BN Core F1,0.83,0.829,output/paper_protocol,True
-Table effect size (d),class 4 BN Core d,-0.17,-0.06,output/paper_protocol,False
-Table effect size (p),class 4 BN Core p,0.28,0.747,output/paper_protocol,False
+Table effect size (d),class 4 BN Core d,-0.06,-0.06,output/paper_protocol,True
+Table effect size (p),class 4 BN Core p,0.747,0.747,output/paper_protocol,True
 Table effect size (F1),class 4 BN Product F1,0.87,0.873,output/paper_protocol,True
-Table effect size (d),class 4 BN Product d,0.09,0.2,output/paper_protocol,False
-Table effect size (p),class 4 BN Product p,0.44,0.295,output/paper_protocol,False
+Table effect size (d),class 4 BN Product d,0.20,0.2,output/paper_protocol,True
+Table effect size (p),class 4 BN Product p,0.295,0.295,output/paper_protocol,True
 Table effect size (F1),class 4 LiNGAM-BN Core F1,0.89,0.886,output/paper_protocol,True
-Table effect size (d),class 4 LiNGAM-BN Core d,0.38,0.63,output/paper_protocol,False
-Table effect size (p),class 4 LiNGAM-BN Core p,0.098,0.001,output/paper_protocol,False
+Table effect size (d),class 4 LiNGAM-BN Core d,0.63,0.63,output/paper_protocol,True
+Table effect size (p),class 4 LiNGAM-BN Core p,0.001,0.001,output/paper_protocol,True
 Table effect size (F1),class 4 LiNGAM-BN Product F1,0.88,0.877,output/paper_protocol,True
-Table effect size (d),class 4 LiNGAM-BN Product d,0.33,0.23,output/paper_protocol,False
-Table effect size (p),class 4 LiNGAM-BN Product p,0.103,0.163,output/paper_protocol,False
-Table short-duration stats,Product Count,100,144.0,output/paper_protocol,False
-Table short-duration stats,Core Count,929,385.0,output/paper_protocol,False
-Table short-duration stats,Product Mean,0.720,0.424,output/paper_protocol,False
-Table short-duration stats,Core Mean,1.449,1.564,output/paper_protocol,False
-Table short-duration stats,Product Std Dev,1.016,0.523,output/paper_protocol,False
-Table short-duration stats,Core Std Dev,1.776,8.747,output/paper_protocol,False
+Table effect size (d),class 4 LiNGAM-BN Product d,0.23,0.23,output/paper_protocol,True
+Table effect size (p),class 4 LiNGAM-BN Product p,0.163,0.163,output/paper_protocol,True
+Table short-duration stats,Product Count,144,144.0,output/paper_protocol,True
+Table short-duration stats,Core Count,385,385.0,output/paper_protocol,True
+Table short-duration stats,Product Mean,0.424,0.424,output/paper_protocol,True
+Table short-duration stats,Core Mean,1.564,1.564,output/paper_protocol,True
+Table short-duration stats,Product Std Dev,0.523,0.523,output/paper_protocol,True
+Table short-duration stats,Core Std Dev,8.747,8.747,output/paper_protocol,True
 Table short-duration stats,Product Min,0.000,0.0,output/paper_protocol,True
 Table short-duration stats,Core Min,0.000,0.0,output/paper_protocol,True
 Table short-duration stats,Product 25%,0.000,0.0,output/paper_protocol,True
 Table short-duration stats,Core 25%,0.000,0.0,output/paper_protocol,True
 Table short-duration stats,Product 50%,0.000,0.0,output/paper_protocol,True
-Table short-duration stats,Core 50%,1.000,0.0,output/paper_protocol,False
+Table short-duration stats,Core 50%,0.000,0.0,output/paper_protocol,True
 Table short-duration stats,Product 75%,1.000,1.0,output/paper_protocol,True
-Table short-duration stats,Core 75%,2.000,1.0,output/paper_protocol,False
-Table short-duration stats,Product Max,4.000,2.0,output/paper_protocol,False
-Table short-duration stats,Core Max,9.000,112.0,output/paper_protocol,False
-Table binary accuracy,Core LR,0.81,0.8608,output/paper_protocol,False
-Table binary accuracy,Product LR,0.83,0.8786,output/paper_protocol,False
-Table binary accuracy,Core RF,0.85,0.8452,output/paper_protocol,True
-Table binary accuracy,Product RF,0.88,0.8786,output/paper_protocol,True
-Table binary accuracy,Core BN,0.86,0.8608,output/paper_protocol,True
-Table binary accuracy,Product BN,0.8815,0.8815,output/paper_protocol,True
-Table binary accuracy,Core LiNGAM+LR,0.95,0.8613,output/paper_protocol,False
-Table binary accuracy,Product LiNGAM+LR,0.94,0.8757,output/paper_protocol,False
-Table binary accuracy,Core LiNGAM+RF,0.93,0.8368,output/paper_protocol,False
-Table binary accuracy,Product LiNGAM+RF,0.92,0.8728,output/paper_protocol,False
-Table binary accuracy,Core LiNGAM+BN,0.91,0.9124,output/paper_protocol,True
-Table binary accuracy,Product LiNGAM+BN,0.94,0.9364,output/paper_protocol,True
-Table binary accuracy,Core LiNGAM+BN(Multi-class),0.841,0.8405,output/paper_protocol,True
-Table binary accuracy,Product LiNGAM+BN(Multi-class),0.817,0.8165,output/paper_protocol,True
+Table short-duration stats,Core 75%,1.000,1.0,output/paper_protocol,True
+Table short-duration stats,Product Max,2.000,2.0,output/paper_protocol,True
+Table short-duration stats,Core Max,112.000,112.0,output/paper_protocol,True
+Table binary accuracy,Core LR,0.861,0.8608,output/paper_protocol,True
+Table binary accuracy,Product LR,0.879,0.8786,output/paper_protocol,True
+Table binary accuracy,Core RF,0.845,0.8452,output/paper_protocol,True
+Table binary accuracy,Product RF,0.879,0.8786,output/paper_protocol,True
+Table binary accuracy,Core BN,0.861,0.8608,output/paper_protocol,True
+Table binary accuracy,Product BN,0.882,0.8815,output/paper_protocol,True
+Table binary accuracy,Core LiNGAM+LR,0.861,0.8613,output/paper_protocol,True
+Table binary accuracy,Product LiNGAM+LR,0.876,0.8757,output/paper_protocol,True
+Table binary accuracy,Core LiNGAM+RF,0.837,0.8368,output/paper_protocol,True
+Table binary accuracy,Product LiNGAM+RF,0.873,0.8728,output/paper_protocol,True
+Table binary accuracy,Core LiNGAM+BN,0.912,0.9124,output/paper_protocol,True
+Table binary accuracy,Product LiNGAM+BN,0.936,0.9364,output/paper_protocol,True
+Table binary accuracy,Core LiNGAM+BN(Multi-class),0.840,0.8405,output/paper_protocol,True
+Table binary accuracy,Product LiNGAM+BN(Multi-class),0.816,0.8165,output/paper_protocol,True

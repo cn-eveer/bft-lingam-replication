@@ -5,7 +5,7 @@
 | Figure 6 (Product)    | 53      | 53    |
 | Table 3               | 40      | 40    |
 | Table 4 (Product)     | 1       | 48    |
-| Table 5 (Core)        | 1       | 48    |
+| Table 5 (Core)        | 0       | 48    |
 | Table 6 (vs macro-F1) | 0       | 8     |
 | Table 8               | 0       | 6     |
 | Table 9               | 0       | 14    |
