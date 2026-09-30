@@ -1,0 +1,12 @@
+| Related          | Factor                | Class 1 (<=1d) | Class 2 (2-7d) | Class 3 (8-30d) | Class 4 (>=31d) |
+| ---------------- | --------------------- | -------------- | -------------- | --------------- | --------------- |
+| Long Resolution  | Comments              | S+             | W+             | W+              | W-              |
+| Long Resolution  | Discussion Days       | M-/S-          | M-             | W-              | W-              |
+| Long Resolution  | Number of Attachments | W+             | N/W+           | W+              | N               |
+| Long Resolution  | Position              | W+             | W+/N           | N               | N               |
+| Short Resolution | Assigned Days         | N              | N              | N/W+            | W+              |
+| Short Resolution | Num Depends           | W-/N           | W+             | W+              | W-/M+           |
+| Short Resolution | Num Duplicates        | N              | W+/N           | W+/N            | M+/W+           |
+| Short Resolution | Priority              | W+/N           | N              | W-/W+           | S-/W-           |
+| Short Resolution | Reporter Reputations  | W-/W+          | W+/W-          | M-/W+           | S-/M-           |
+| Short Resolution | Severity              | W-/N           | N              | W-              | S-              |

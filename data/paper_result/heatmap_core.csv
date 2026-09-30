@@ -1,0 +1,18 @@
+Factor,All,Class 1,Class 2,Class 3,Class 4
+Assigned Days,0.38,,,0.03,0.22
+Assigned Days(Class),,-0.063,0.034,0.016,
+Comments,0.077,5.1,0.58,0.036,-0.065
+Developer Workloads,1.5,,,,
+Discussion Days,0.02,-11.0,-1.2,-0.76,-0.74
+Discussion Days(Class),3.7,-0.066,,,-0.022
+BFT(Class),0.019,,,,
+Num Blocks,,0.022,,0.13,0.75
+Num Depends,,,0.15,0.091,1.1
+Num Duplicates,0.48,,,,0.73
+Number of Attachment,,0.11,0.067,0.024,
+Position,,0.026,,,
+Priority,,,,0.01,-0.51
+Reporter Reputations,-5.7,0.019,-0.015,0.053,-3.2
+Severity,-3.7,,,-0.24,-6.0
+Total Resolution Time,0.99,,,0.054,0.71
+Total Resolution Time(Class),0.015,0.12,0.057,,

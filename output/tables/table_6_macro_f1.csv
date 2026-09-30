@@ -1,0 +1,5 @@
+Model,Core,Product
+RF,0.538,0.521
+LR,0.434,0.383
+BN,0.448,0.468
+LiNGAM-BN,0.43,0.423
