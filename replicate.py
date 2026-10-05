@@ -9,13 +9,13 @@ which puts them next to the computed values so differences are visible.
 Pipeline (mirrors the original code in exec/lingam_s.py and exec/bn_t.py):
 
   01  data provenance: input checksums and the filtering funnel
-  02  preprocessing (lingam_s.process + check_train filters) and Table 1
-  03  LiNGAM bootstrap total causal effects -> Figures 5 and 6
+  02  preprocessing (lingam_s.process + check_train filters) and Table I
+  03  LiNGAM bootstrap total causal effects -> Figures 5 and 6 (heatmaps)
       (stored original bootstrap outputs by default; `--retrain-lingam`
       re-runs the 100-sample bootstrap from the raw data)
-  04  Table 3: strength/direction codes from the Figure 5/6 values
-  05  RQ3: RF / LR / BN / LiNGAM-BN on 4 BFT classes -> Tables 4-7
-  06  RQ4: short-duration statistics and binary classification -> Tables 8-9
+  04  Table III: strength/direction codes from the Figure 5/6 values
+  05  RQ3: RF / LR / BN / LiNGAM-BN on 4 BFT classes -> Tables IV-VI
+  06  RQ4: short-duration statistics and binary classification -> Tables VII-VIII
   07  comparison of every computed value with the manuscript
 
 Usage:
@@ -268,7 +268,7 @@ def step_02_table1(tables: Path) -> pd.DataFrame:
             row[CLASS_LABELS[c]] = f"{counts[c]:,} ({100 * counts[c] / len(g):.2f}%)"
         row["Total"] = len(g)
         rows.append(row)
-    return write_table(pd.DataFrame(rows), tables, "table_1_bug_fixing_time_distribution")
+    return write_table(pd.DataFrame(rows), tables, "table_I_bft_distribution")
 
 
 # ---------------------------------------------------------------------------
@@ -350,7 +350,7 @@ def step_03_heatmaps(tables: Path, figures: Path, lingam_dir: Path = STORED_LING
 
 
 # ---------------------------------------------------------------------------
-# 04 Table 3
+# 04 Table III
 # ---------------------------------------------------------------------------
 def strength_code(value) -> str:
     """Paper rule: S |v|>5, M 1<=|v|<=5, W 0<|v|<1, N none; sign = direction."""
@@ -372,7 +372,7 @@ def step_04_table3(tables: Path, lingam_dir: Path = STORED_LINGAM_DIR) -> pd.Dat
             row[CLASS_LABELS[cls]] = (codes["product"] if codes["product"] == codes["core"]
                                       else f"{codes['product']}/{codes['core']}")
         rows.append(row)
-    return write_table(pd.DataFrame(rows), tables, "table_3_lingam_strength_direction")
+    return write_table(pd.DataFrame(rows), tables, "table_III_strength_direction")
 
 
 # ---------------------------------------------------------------------------
@@ -572,7 +572,7 @@ def step_05_prediction_tables(tables: Path, lingam_dir: Path = STORED_LINGAM_DIR
         print(f"[rq3] {data_type}: train={info['n_train']:,} test={info['n_test']:,}")
         results[data_type] = preds
 
-    for data_type, name in [("product", "table_4_prediction_product"), ("core", "table_5_prediction_core")]:
+    for data_type, name in [("product", "table_IV_performance_product"), ("core", "table_IV_performance_core")]:
         p, rows = results[data_type], []
         for m in MODELS_4:
             rep = classification_report(p["y_true"], p[f"pred_{m}"], labels=CLASSES, output_dict=True, zero_division=0)
@@ -584,7 +584,7 @@ def step_05_prediction_tables(tables: Path, lingam_dir: Path = STORED_LINGAM_DIR
         "Model": m,
         **{SCOPE[d]: round(f1_score(results[d]["y_true"], results[d][f"pred_{m}"], labels=CLASSES,
                                     average="macro", zero_division=0), 3) for d in DATA_TYPES},
-    } for m in MODELS_4]), tables, "table_6_macro_f1")
+    } for m in MODELS_4]), tables, "table_V_macro_f1")
 
     rows = []
     for cls in CLASSES:
@@ -600,7 +600,7 @@ def step_05_prediction_tables(tables: Path, lingam_dir: Path = STORED_LINGAM_DIR
                     delta, pv = effect_vs_rf(yt, yr, ym, cls)
                     row[f"{SCOPE[d]} d/p"] = f"{delta:.2f}/{pv:.3f}"
             rows.append(row)
-    write_table(pd.DataFrame(rows), tables, "table_7_effect_size_f1")
+    write_table(pd.DataFrame(rows), tables, "table_VI_effect_size_f1")
     return results
 
 
@@ -615,7 +615,7 @@ def step_06_binary_tables(tables: Path, lingam_dir: Path = STORED_LINGAM_DIR, rq
         s = short.describe()
         stats[SCOPE[d]] = [int(s["count"]), s["mean"], s["std"], s["min"], s["25%"], s["50%"], s["75%"], s["max"]]
     t8 = pd.DataFrame(stats, index=["Count", "Mean", "Std Dev", "Min", "25%", "50%", "75%", "Max"]).round(3)
-    write_table(t8.reset_index(names="Metric"), tables, "table_8_short_duration_bft_stats")
+    write_table(t8.reset_index(names="Metric"), tables, "table_VII_short_duration_bft_stats")
 
     rows = {}
     for d in DATA_TYPES:
@@ -630,7 +630,7 @@ def step_06_binary_tables(tables: Path, lingam_dir: Path = STORED_LINGAM_DIR, rq
     write_table(pd.DataFrame({"Model": models,
                               "Core Accuracy": [round(rows["core"][m], 4) for m in models],
                               "Product Accuracy": [round(rows["product"][m], 4) for m in models]}),
-                tables, "table_9_binary_classification_accuracy")
+                tables, "table_VIII_binary_accuracy")
 
 
 # ---------------------------------------------------------------------------
@@ -649,11 +649,11 @@ def step_07_compare_with_paper(tables: Path) -> pd.DataFrame:
 
     have = lambda name: (tables / f"{name}.csv").exists()
 
-    if have("table_1_bug_fixing_time_distribution"):
-        t1 = pd.read_csv(tables / "table_1_bug_fixing_time_distribution.csv").fillna("")
+    if have("table_I_bft_distribution"):
+        t1 = pd.read_csv(tables / "table_I_bft_distribution.csv").fillna("")
         for (bt, proj), v in PAPER["table1_total"].items():
             hit = t1[(t1["Bug Type"] == bt) & (t1["Project"] == proj)]
-            add("Table 1 total", f"{bt} {proj}".strip(), v, int(hit["Total"].iloc[0]) if len(hit) else None)
+            add("Table I total", f"{bt} {proj}".strip(), v, int(hit["Total"].iloc[0]) if len(hit) else None)
 
     # Figures 5/6: computed LiNGAM effects vs the values plotted in the paper
     for d, csv in [("core", "heatmap_core.csv"), ("product", "heatmap_product.csv")]:
@@ -674,13 +674,13 @@ def step_07_compare_with_paper(tables: Path) -> pd.DataFrame:
                              "Item": f"{factor} {pc}", "Paper": pv, "Computed": round(cv, 4) if not pd.isna(cv) else cv,
                              "Match": bool(ok)})
 
-    if have("table_3_lingam_strength_direction"):
-        t3 = pd.read_csv(tables / "table_3_lingam_strength_direction.csv").set_index("Factor")
+    if have("table_III_strength_direction"):
+        t3 = pd.read_csv(tables / "table_III_strength_direction.csv").set_index("Factor")
         for factor, codes in PAPER["table3"].items():
             for cls, code in zip(CLASSES, codes):
-                add("Table 3", f"{factor} class {cls}", code, t3.loc[factor, CLASS_LABELS[cls]])
+                add("Table III", f"{factor} class {cls}", code, t3.loc[factor, CLASS_LABELS[cls]])
 
-    for d, name in [("product", "table_4_prediction_product"), ("core", "table_5_prediction_core")]:
+    for d, name in [("product", "table_IV_performance_product"), ("core", "table_IV_performance_core")]:
         if not have(name):
             continue
         t = pd.read_csv(tables / f"{name}.csv")
@@ -688,30 +688,30 @@ def step_07_compare_with_paper(tables: Path) -> pd.DataFrame:
             for m, vals in PAPER[key][d].items():
                 hit = t[(t["Model"] == m) & (t["Metric"] == metric)].iloc[0]
                 for cls, v in zip(CLASSES, vals):
-                    add(f"Table {4 if d == 'product' else 5} ({SCOPE[d]})", f"{m} {metric} class {cls}", v,
+                    add(f"Table IV ({SCOPE[d]})", f"{m} {metric} class {cls}", v,
                         hit[CLASS_LABELS[cls]])
 
-    if have("table_6_macro_f1"):
-        t6 = pd.read_csv(tables / "table_6_macro_f1.csv").set_index("Model")
+    if have("table_V_macro_f1"):
+        t6 = pd.read_csv(tables / "table_V_macro_f1.csv").set_index("Model")
         for d, models in PAPER["macro_f1"].items():
             for m, v in models.items():
                 if f"{SCOPE[d]} macro-F1" in t6.columns:
-                    add("Table 6 (vs macro-F1)", f"{SCOPE[d]} {m}", v, t6.loc[m, f"{SCOPE[d]} macro-F1"])
-                    add("Table 6 (vs accuracy)", f"{SCOPE[d]} {m}", v, t6.loc[m, f"{SCOPE[d]} accuracy"])
+                    add("Table V (vs macro-F1)", f"{SCOPE[d]} {m}", v, t6.loc[m, f"{SCOPE[d]} macro-F1"])
+                    add("Table V (vs accuracy)", f"{SCOPE[d]} {m}", v, t6.loc[m, f"{SCOPE[d]} accuracy"])
                 else:
-                    add("Table 6 (vs macro-F1)", f"{SCOPE[d]} {m}", v, t6.loc[m, SCOPE[d]])
+                    add("Table V (vs macro-F1)", f"{SCOPE[d]} {m}", v, t6.loc[m, SCOPE[d]])
 
-    if have("table_8_short_duration_bft_stats"):
-        t8 = pd.read_csv(tables / "table_8_short_duration_bft_stats.csv").set_index("Metric")
+    if have("table_VII_short_duration_bft_stats"):
+        t8 = pd.read_csv(tables / "table_VII_short_duration_bft_stats.csv").set_index("Metric")
         for d, items in PAPER["table8"].items():
             for k, v in items.items():
-                add("Table 8", f"{SCOPE[d]} {k}", v, t8.loc[k, SCOPE[d]])
+                add("Table VII", f"{SCOPE[d]} {k}", v, t8.loc[k, SCOPE[d]])
 
-    if have("table_9_binary_classification_accuracy"):
-        t9 = pd.read_csv(tables / "table_9_binary_classification_accuracy.csv").set_index("Model")
+    if have("table_VIII_binary_accuracy"):
+        t9 = pd.read_csv(tables / "table_VIII_binary_accuracy.csv").set_index("Model")
         for d, models in PAPER["table9"].items():
             for m, v in models.items():
-                add("Table 9", f"{SCOPE[d]} {m}", v, t9.loc[m, f"{SCOPE[d]} Accuracy"])
+                add("Table VIII", f"{SCOPE[d]} {m}", v, t9.loc[m, f"{SCOPE[d]} Accuracy"])
 
     out = pd.DataFrame(rows)
     write_table(out, tables, "07_paper_vs_computed")
@@ -758,7 +758,7 @@ def _rf_lr_on_bnt_inputs(raw: pd.DataFrame, thresholds, lingam_tce: pd.DataFrame
 
 
 def step_08_paper_protocol(output: Path, lingam_dir: Path = STORED_LINGAM_DIR, diagnostics: bool = True) -> pd.DataFrame:
-    """Tables 4-7 and 9 under the manuscript's evaluation protocol, plus a
+    """Tables IV-VIII under the manuscript's evaluation protocol, plus a
     diagnostic table showing what each hidden condition contributes."""
     import paper_protocol as pp
 
@@ -780,7 +780,7 @@ def step_08_paper_protocol(output: Path, lingam_dir: Path = STORED_LINGAM_DIR, d
         p2.to_csv(tables / f"predictions_2class_{d}.csv", index=False)
         print(f"[paper protocol] {d}: done")
 
-    for d, name in [("product", "table_4_prediction_product"), ("core", "table_5_prediction_core")]:
+    for d, name in [("product", "table_IV_performance_product"), ("core", "table_IV_performance_core")]:
         rows = []
         for m in MODELS_4:
             rep = classification_report(preds4[d]["y_true"], preds4[d][f"pred_{m}"], labels=CLASSES,
@@ -795,7 +795,7 @@ def step_08_paper_protocol(output: Path, lingam_dir: Path = STORED_LINGAM_DIR, d
            for d in DATA_TYPES},
         **{f"{SCOPE[d]} accuracy": round(accuracy_score(preds4[d]["y_true"], preds4[d][f"pred_{m}"]), 4)
            for d in DATA_TYPES},
-    } for m in MODELS_4]), tables, "table_6_macro_f1")
+    } for m in MODELS_4]), tables, "table_V_macro_f1")
 
     rows = []
     for cls in CLASSES:
@@ -807,15 +807,15 @@ def step_08_paper_protocol(output: Path, lingam_dir: Path = STORED_LINGAM_DIR, d
                 row[f"{SCOPE[d]} F1"] = round(float(_f1_batch(yt[None], ym[None], cls)[0]), 3)
                 row[f"{SCOPE[d]} d/p"] = "--" if m == "RF" else "{:.2f}/{:.3f}".format(*effect_vs_rf(yt, yr, ym, cls))
             rows.append(row)
-    write_table(pd.DataFrame(rows), tables, "table_7_effect_size_f1")
+    write_table(pd.DataFrame(rows), tables, "table_VI_effect_size_f1")
 
-    # Table 8: BFT (days) of the test reports that this protocol's LiNGAM-BN predicts as class 1
+    # Table VII: BFT (days) of the test reports that this protocol's LiNGAM-BN predicts as class 1
     stats = {}
     for d in ["product", "core"]:
         s = preds4[d].loc[preds4[d]["pred_LiNGAM-BN"] == 1, "fixing_time"].describe()
         stats[SCOPE[d]] = [int(s["count"]), s["mean"], s["std"], s["min"], s["25%"], s["50%"], s["75%"], s["max"]]
     t8 = pd.DataFrame(stats, index=["Count", "Mean", "Std Dev", "Min", "25%", "50%", "75%", "Max"]).round(3)
-    write_table(t8.reset_index(names="Metric"), tables, "table_8_short_duration_bft_stats")
+    write_table(t8.reset_index(names="Metric"), tables, "table_VII_short_duration_bft_stats")
 
     acc2 = {d: [round(accuracy_score(preds2[d]["y_true"], preds2[d][f"pred_{m}"]), 4) for m in MODELS_2]
                 + [round(accuracy_score(preds4[d]["y_true"], preds4[d]["pred_LiNGAM-BN"]), 4)] for d in DATA_TYPES}
@@ -823,7 +823,7 @@ def step_08_paper_protocol(output: Path, lingam_dir: Path = STORED_LINGAM_DIR, d
         "Model": MODELS_2 + ["LiNGAM+BN(Multi-class)"],
         "Core Accuracy": acc2["core"],
         "Product Accuracy": acc2["product"],
-    }), tables, "table_9_binary_classification_accuracy")
+    }), tables, "table_VIII_binary_accuracy")
 
     if diagnostics:
         rows = []

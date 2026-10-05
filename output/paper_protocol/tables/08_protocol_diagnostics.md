@@ -4,7 +4,7 @@
 | Core    | LiNGAM-BN | all reports (incl. test) | yes                   | 0.8405   | 0.842    |
 | Core    | BN        | all reports (incl. test) | no                    | 0.3707   | 0.368    |
 | Core    | LiNGAM-BN | all reports (incl. test) | no                    | 0.4885   | 0.488    |
-| Core    | BN        | training split           | yes                   | 0.7727   | 0.773    |
+| Core    | BN        | training split           | yes                   | 0.7737   | 0.774    |
 | Core    | LiNGAM-BN | training split           | yes                   | 0.7059   | 0.71     |
 | Core    | BN        | training split           | no                    | 0.3629   | 0.36     |
 | Core    | LiNGAM-BN | training split           | no                    | 0.3384   | 0.336    |

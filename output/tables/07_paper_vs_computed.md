@@ -1,12 +1,12 @@
 | Artifact              | Item                                 | Paper  | Computed | Match |
 | --------------------- | ------------------------------------ | ------ | -------- | ----- |
-| Table 1 total         | Product Firefox                      | 1073   | 1073     | True  |
-| Table 1 total         | Product Firefox for iOS              | 106    | 106      | True  |
-| Table 1 total         | Product SeaMonkey                    | 1860   | 1860     | True  |
-| Table 1 total         | Product Thunderbird                  | 417    | 417      | True  |
-| Table 1 total         | Product Total                        | 3456   | 3456     | True  |
-| Table 1 total         | Core Total                           | 9590   | 9590     | True  |
-| Table 1 total         | Total                                | 13046  | 13046    | True  |
+| Table I total         | Product Firefox                      | 1073   | 1073     | True  |
+| Table I total         | Product Firefox for iOS              | 106    | 106      | True  |
+| Table I total         | Product SeaMonkey                    | 1860   | 1860     | True  |
+| Table I total         | Product Thunderbird                  | 417    | 417      | True  |
+| Table I total         | Product Total                        | 3456   | 3456     | True  |
+| Table I total         | Core Total                           | 9590   | 9590     | True  |
+| Table I total         | Total                                | 13046  | 13046    | True  |
 | Figure 5 (Core)       | Assigned Days All                    | 0.38   | 0.3786   | True  |
 | Figure 5 (Core)       | Assigned Days Class 3                | 0.03   | 0.0296   | True  |
 | Figure 5 (Core)       | Assigned Days Class 4                | 0.22   | 0.2178   | True  |
@@ -109,167 +109,167 @@
 | Figure 6 (Product)    | Total Resolution Time(Class) Class 1 | 0.15   | 0.1451   | True  |
 | Figure 6 (Product)    | Total Resolution Time(Class) Class 2 | 0.044  | 0.0439   | True  |
 | Figure 6 (Product)    | Total Resolution Time(Class) Class 3 | 0.011  | 0.0106   | True  |
-| Table 3               | Comments class 1                     | S+     | S+       | True  |
-| Table 3               | Comments class 2                     | W+     | W+       | True  |
-| Table 3               | Comments class 3                     | W+     | W+       | True  |
-| Table 3               | Comments class 4                     | W-     | W-       | True  |
-| Table 3               | Discussion Days class 1              | M-/S-  | M-/S-    | True  |
-| Table 3               | Discussion Days class 2              | M-     | M-       | True  |
-| Table 3               | Discussion Days class 3              | W-     | W-       | True  |
-| Table 3               | Discussion Days class 4              | W-     | W-       | True  |
-| Table 3               | Number of Attachments class 1        | W+     | W+       | True  |
-| Table 3               | Number of Attachments class 2        | N/W+   | N/W+     | True  |
-| Table 3               | Number of Attachments class 3        | W+     | W+       | True  |
-| Table 3               | Number of Attachments class 4        | N      | N        | True  |
-| Table 3               | Position class 1                     | W+     | W+       | True  |
-| Table 3               | Position class 2                     | W+/N   | W+/N     | True  |
-| Table 3               | Position class 3                     | N      | N        | True  |
-| Table 3               | Position class 4                     | N      | N        | True  |
-| Table 3               | Assigned Days class 1                | N      | N        | True  |
-| Table 3               | Assigned Days class 2                | N      | N        | True  |
-| Table 3               | Assigned Days class 3                | N/W+   | N/W+     | True  |
-| Table 3               | Assigned Days class 4                | W+     | W+       | True  |
-| Table 3               | Num Depends class 1                  | W-/N   | W-/N     | True  |
-| Table 3               | Num Depends class 2                  | W+     | W+       | True  |
-| Table 3               | Num Depends class 3                  | W+     | W+       | True  |
-| Table 3               | Num Depends class 4                  | W-/M+  | W-/M+    | True  |
-| Table 3               | Num Duplicates class 1               | N      | N        | True  |
-| Table 3               | Num Duplicates class 2               | W+/N   | W+/N     | True  |
-| Table 3               | Num Duplicates class 3               | W+/N   | W+/N     | True  |
-| Table 3               | Num Duplicates class 4               | M+/W+  | M+/W+    | True  |
-| Table 3               | Priority class 1                     | W+/N   | W+/N     | True  |
-| Table 3               | Priority class 2                     | N      | N        | True  |
-| Table 3               | Priority class 3                     | W-/W+  | W-/W+    | True  |
-| Table 3               | Priority class 4                     | S-/W-  | S-/W-    | True  |
-| Table 3               | Reporter Reputations class 1         | W-/W+  | W-/W+    | True  |
-| Table 3               | Reporter Reputations class 2         | W+/W-  | W+/W-    | True  |
-| Table 3               | Reporter Reputations class 3         | M-/W+  | M-/W+    | True  |
-| Table 3               | Reporter Reputations class 4         | S-/M-  | S-/M-    | True  |
-| Table 3               | Severity class 1                     | W-/N   | W-/N     | True  |
-| Table 3               | Severity class 2                     | N      | N        | True  |
-| Table 3               | Severity class 3                     | W-     | W-       | True  |
-| Table 3               | Severity class 4                     | S-     | S-       | True  |
-| Table 4 (Product)     | RF Precision class 1                 | 0.87   | 0.744    | False |
-| Table 4 (Product)     | RF Precision class 2                 | 0.67   | 0.421    | False |
-| Table 4 (Product)     | RF Precision class 3                 | 0.69   | 0.36     | False |
-| Table 4 (Product)     | RF Precision class 4                 | 0.81   | 0.579    | False |
-| Table 4 (Product)     | LR Precision class 1                 | 0.88   | 0.488    | False |
-| Table 4 (Product)     | LR Precision class 2                 | 0.64   | 0.362    | False |
-| Table 4 (Product)     | LR Precision class 3                 | 0.8    | 0.184    | False |
-| Table 4 (Product)     | LR Precision class 4                 | 0.78   | 0.486    | False |
-| Table 4 (Product)     | BN Precision class 1                 | 1.0    | 0.48     | False |
-| Table 4 (Product)     | BN Precision class 2                 | 0.65   | 0.475    | False |
-| Table 4 (Product)     | BN Precision class 3                 | 0.81   | 0.55     | False |
-| Table 4 (Product)     | BN Precision class 4                 | 0.78   | 0.552    | False |
-| Table 4 (Product)     | LiNGAM-BN Precision class 1          | 0.99   | 0.41     | False |
-| Table 4 (Product)     | LiNGAM-BN Precision class 2          | 0.76   | 0.389    | False |
-| Table 4 (Product)     | LiNGAM-BN Precision class 3          | 0.78   | 0.421    | False |
-| Table 4 (Product)     | LiNGAM-BN Precision class 4          | 0.78   | 0.603    | False |
-| Table 4 (Product)     | RF Recall class 1                    | 0.73   | 0.626    | False |
-| Table 4 (Product)     | RF Recall class 2                    | 0.64   | 0.458    | False |
-| Table 4 (Product)     | RF Recall class 3                    | 0.76   | 0.327    | False |
-| Table 4 (Product)     | RF Recall class 4                    | 0.91   | 0.676    | False |
-| Table 4 (Product)     | LR Recall class 1                    | 0.69   | 0.708    | False |
-| Table 4 (Product)     | LR Recall class 2                    | 0.67   | 0.298    | False |
-| Table 4 (Product)     | LR Recall class 3                    | 0.73   | 0.06     | False |
-| Table 4 (Product)     | LR Recall class 4                    | 0.99   | 0.603    | False |
-| Table 4 (Product)     | BN Recall class 1                    | 0.67   | 0.744    | False |
-| Table 4 (Product)     | BN Recall class 2                    | 0.76   | 0.333    | False |
-| Table 4 (Product)     | BN Recall class 3                    | 0.72   | 0.293    | False |
-| Table 4 (Product)     | BN Recall class 4                    | 1.0    | 0.592    | True  |
-| Table 4 (Product)     | LiNGAM-BN Recall class 1             | 0.73   | 0.687    | False |
-| Table 4 (Product)     | LiNGAM-BN Recall class 2             | 0.73   | 0.345    | False |
-| Table 4 (Product)     | LiNGAM-BN Recall class 3             | 0.81   | 0.267    | False |
-| Table 4 (Product)     | LiNGAM-BN Recall class 4             | 1.0    | 0.408    | False |
-| Table 4 (Product)     | RF F1 class 1                        | 0.79   | 0.68     | False |
-| Table 4 (Product)     | RF F1 class 2                        | 0.66   | 0.439    | False |
-| Table 4 (Product)     | RF F1 class 3                        | 0.72   | 0.343    | False |
-| Table 4 (Product)     | RF F1 class 4                        | 0.86   | 0.624    | False |
-| Table 4 (Product)     | LR F1 class 1                        | 0.78   | 0.577    | False |
-| Table 4 (Product)     | LR F1 class 2                        | 0.65   | 0.327    | False |
-| Table 4 (Product)     | LR F1 class 3                        | 0.77   | 0.09     | False |
-| Table 4 (Product)     | LR F1 class 4                        | 0.88   | 0.539    | False |
-| Table 4 (Product)     | BN F1 class 1                        | 0.8    | 0.584    | False |
-| Table 4 (Product)     | BN F1 class 2                        | 0.7    | 0.392    | False |
-| Table 4 (Product)     | BN F1 class 3                        | 0.76   | 0.383    | False |
-| Table 4 (Product)     | BN F1 class 4                        | 0.87   | 0.571    | False |
-| Table 4 (Product)     | LiNGAM-BN F1 class 1                 | 0.84   | 0.513    | False |
-| Table 4 (Product)     | LiNGAM-BN F1 class 2                 | 0.74   | 0.366    | False |
-| Table 4 (Product)     | LiNGAM-BN F1 class 3                 | 0.79   | 0.327    | False |
-| Table 4 (Product)     | LiNGAM-BN F1 class 4                 | 0.88   | 0.487    | False |
-| Table 5 (Core)        | RF Precision class 1                 | 0.83   | 0.651    | False |
-| Table 5 (Core)        | RF Precision class 2                 | 0.69   | 0.435    | False |
-| Table 5 (Core)        | RF Precision class 3                 | 0.74   | 0.449    | False |
-| Table 5 (Core)        | RF Precision class 4                 | 0.77   | 0.654    | False |
-| Table 5 (Core)        | LR Precision class 1                 | 0.94   | 0.444    | False |
-| Table 5 (Core)        | LR Precision class 2                 | 0.67   | 0.401    | False |
-| Table 5 (Core)        | LR Precision class 3                 | 0.72   | 0.371    | False |
-| Table 5 (Core)        | LR Precision class 4                 | 0.81   | 0.602    | False |
-| Table 5 (Core)        | BN Precision class 1                 | 1.0    | 0.43     | False |
-| Table 5 (Core)        | BN Precision class 2                 | 0.78   | 0.373    | False |
-| Table 5 (Core)        | BN Precision class 3                 | 0.74   | 0.444    | False |
-| Table 5 (Core)        | BN Precision class 4                 | 0.71   | 0.569    | False |
-| Table 5 (Core)        | LiNGAM-BN Precision class 1          | 0.94   | 0.417    | False |
-| Table 5 (Core)        | LiNGAM-BN Precision class 2          | 0.79   | 0.36     | False |
-| Table 5 (Core)        | LiNGAM-BN Precision class 3          | 0.81   | 0.433    | False |
-| Table 5 (Core)        | LiNGAM-BN Precision class 4          | 0.85   | 0.558    | False |
-| Table 5 (Core)        | RF Recall class 1                    | 0.7    | 0.608    | False |
-| Table 5 (Core)        | RF Recall class 2                    | 0.69   | 0.516    | False |
-| Table 5 (Core)        | RF Recall class 3                    | 0.74   | 0.44     | False |
-| Table 5 (Core)        | RF Recall class 4                    | 0.91   | 0.565    | False |
-| Table 5 (Core)        | LR Recall class 1                    | 0.62   | 0.651    | False |
-| Table 5 (Core)        | LR Recall class 2                    | 0.78   | 0.455    | False |
-| Table 5 (Core)        | LR Recall class 3                    | 0.77   | 0.261    | False |
-| Table 5 (Core)        | LR Recall class 4                    | 0.9    | 0.392    | False |
-| Table 5 (Core)        | BN Recall class 1                    | 0.62   | 0.63     | False |
-| Table 5 (Core)        | BN Recall class 2                    | 0.73   | 0.335    | False |
-| Table 5 (Core)        | BN Recall class 3                    | 0.8    | 0.339    | False |
-| Table 5 (Core)        | BN Recall class 4                    | 1.0    | 0.499    | False |
-| Table 5 (Core)        | LiNGAM-BN Recall class 1             | 0.76   | 0.578    | False |
-| Table 5 (Core)        | LiNGAM-BN Recall class 2             | 0.82   | 0.371    | False |
-| Table 5 (Core)        | LiNGAM-BN Recall class 3             | 0.88   | 0.331    | False |
-| Table 5 (Core)        | LiNGAM-BN Recall class 4             | 0.92   | 0.444    | False |
-| Table 5 (Core)        | RF F1 class 1                        | 0.76   | 0.629    | False |
-| Table 5 (Core)        | RF F1 class 2                        | 0.69   | 0.472    | False |
-| Table 5 (Core)        | RF F1 class 3                        | 0.74   | 0.444    | False |
-| Table 5 (Core)        | RF F1 class 4                        | 0.83   | 0.606    | False |
-| Table 5 (Core)        | LR F1 class 1                        | 0.75   | 0.528    | False |
-| Table 5 (Core)        | LR F1 class 2                        | 0.72   | 0.427    | False |
-| Table 5 (Core)        | LR F1 class 3                        | 0.74   | 0.306    | False |
-| Table 5 (Core)        | LR F1 class 4                        | 0.85   | 0.475    | False |
-| Table 5 (Core)        | BN F1 class 1                        | 0.77   | 0.511    | False |
-| Table 5 (Core)        | BN F1 class 2                        | 0.75   | 0.353    | False |
-| Table 5 (Core)        | BN F1 class 3                        | 0.77   | 0.385    | False |
-| Table 5 (Core)        | BN F1 class 4                        | 0.83   | 0.532    | False |
-| Table 5 (Core)        | LiNGAM-BN F1 class 1                 | 0.84   | 0.484    | False |
-| Table 5 (Core)        | LiNGAM-BN F1 class 2                 | 0.8    | 0.365    | False |
-| Table 5 (Core)        | LiNGAM-BN F1 class 3                 | 0.84   | 0.375    | False |
-| Table 5 (Core)        | LiNGAM-BN F1 class 4                 | 0.89   | 0.495    | False |
-| Table 6 (vs macro-F1) | Core RF                              | 0.754  | 0.538    | False |
-| Table 6 (vs macro-F1) | Core LR                              | 0.766  | 0.434    | False |
-| Table 6 (vs macro-F1) | Core BN                              | 0.778  | 0.445    | False |
-| Table 6 (vs macro-F1) | Core LiNGAM-BN                       | 0.842  | 0.43     | False |
-| Table 6 (vs macro-F1) | Product RF                           | 0.757  | 0.521    | False |
-| Table 6 (vs macro-F1) | Product LR                           | 0.768  | 0.383    | False |
-| Table 6 (vs macro-F1) | Product BN                           | 0.785  | 0.482    | False |
-| Table 6 (vs macro-F1) | Product LiNGAM-BN                    | 0.812  | 0.423    | False |
-| Table 8               | Product Count                        | 144    | 327.0    | False |
-| Table 8               | Product Mean                         | 0.424  | 31.758   | False |
-| Table 8               | Product Max                          | 2.0    | 560.0    | False |
-| Table 8               | Core Count                           | 385    | 665.0    | False |
-| Table 8               | Core Mean                            | 1.564  | 13.417   | False |
-| Table 8               | Core Max                             | 112.0  | 249.0    | False |
-| Table 9               | Core LR                              | 0.861  | 0.6637   | False |
-| Table 9               | Core RF                              | 0.845  | 0.7513   | False |
-| Table 9               | Core BN                              | 0.861  | 0.7325   | False |
-| Table 9               | Core LiNGAM+LR                       | 0.861  | 0.6658   | False |
-| Table 9               | Core LiNGAM+RF                       | 0.837  | 0.7112   | False |
-| Table 9               | Core LiNGAM+BN                       | 0.912  | 0.7174   | False |
-| Table 9               | Core LiNGAM+BN(Multi-class)          | 0.84   | 0.4286   | False |
-| Table 9               | Product LR                           | 0.879  | 0.7341   | False |
-| Table 9               | Product RF                           | 0.879  | 0.7905   | False |
-| Table 9               | Product BN                           | 0.882  | 0.737    | False |
-| Table 9               | Product LiNGAM+LR                    | 0.876  | 0.6922   | False |
-| Table 9               | Product LiNGAM+RF                    | 0.873  | 0.6879   | False |
-| Table 9               | Product LiNGAM+BN                    | 0.936  | 0.6965   | False |
-| Table 9               | Product LiNGAM+BN(Multi-class)       | 0.816  | 0.4408   | False |
+| Table III             | Comments class 1                     | S+     | S+       | True  |
+| Table III             | Comments class 2                     | W+     | W+       | True  |
+| Table III             | Comments class 3                     | W+     | W+       | True  |
+| Table III             | Comments class 4                     | W-     | W-       | True  |
+| Table III             | Discussion Days class 1              | M-/S-  | M-/S-    | True  |
+| Table III             | Discussion Days class 2              | M-     | M-       | True  |
+| Table III             | Discussion Days class 3              | W-     | W-       | True  |
+| Table III             | Discussion Days class 4              | W-     | W-       | True  |
+| Table III             | Number of Attachments class 1        | W+     | W+       | True  |
+| Table III             | Number of Attachments class 2        | N/W+   | N/W+     | True  |
+| Table III             | Number of Attachments class 3        | W+     | W+       | True  |
+| Table III             | Number of Attachments class 4        | N      | N        | True  |
+| Table III             | Position class 1                     | W+     | W+       | True  |
+| Table III             | Position class 2                     | W+/N   | W+/N     | True  |
+| Table III             | Position class 3                     | N      | N        | True  |
+| Table III             | Position class 4                     | N      | N        | True  |
+| Table III             | Assigned Days class 1                | N      | N        | True  |
+| Table III             | Assigned Days class 2                | N      | N        | True  |
+| Table III             | Assigned Days class 3                | N/W+   | N/W+     | True  |
+| Table III             | Assigned Days class 4                | W+     | W+       | True  |
+| Table III             | Num Depends class 1                  | W-/N   | W-/N     | True  |
+| Table III             | Num Depends class 2                  | W+     | W+       | True  |
+| Table III             | Num Depends class 3                  | W+     | W+       | True  |
+| Table III             | Num Depends class 4                  | W-/M+  | W-/M+    | True  |
+| Table III             | Num Duplicates class 1               | N      | N        | True  |
+| Table III             | Num Duplicates class 2               | W+/N   | W+/N     | True  |
+| Table III             | Num Duplicates class 3               | W+/N   | W+/N     | True  |
+| Table III             | Num Duplicates class 4               | M+/W+  | M+/W+    | True  |
+| Table III             | Priority class 1                     | W+/N   | W+/N     | True  |
+| Table III             | Priority class 2                     | N      | N        | True  |
+| Table III             | Priority class 3                     | W-/W+  | W-/W+    | True  |
+| Table III             | Priority class 4                     | S-/W-  | S-/W-    | True  |
+| Table III             | Reporter Reputations class 1         | W-/W+  | W-/W+    | True  |
+| Table III             | Reporter Reputations class 2         | W+/W-  | W+/W-    | True  |
+| Table III             | Reporter Reputations class 3         | M-/W+  | M-/W+    | True  |
+| Table III             | Reporter Reputations class 4         | S-/M-  | S-/M-    | True  |
+| Table III             | Severity class 1                     | W-/N   | W-/N     | True  |
+| Table III             | Severity class 2                     | N      | N        | True  |
+| Table III             | Severity class 3                     | W-     | W-       | True  |
+| Table III             | Severity class 4                     | S-     | S-       | True  |
+| Table IV (Product)    | RF Precision class 1                 | 0.87   | 0.744    | False |
+| Table IV (Product)    | RF Precision class 2                 | 0.67   | 0.421    | False |
+| Table IV (Product)    | RF Precision class 3                 | 0.69   | 0.36     | False |
+| Table IV (Product)    | RF Precision class 4                 | 0.81   | 0.579    | False |
+| Table IV (Product)    | LR Precision class 1                 | 0.88   | 0.488    | False |
+| Table IV (Product)    | LR Precision class 2                 | 0.64   | 0.362    | False |
+| Table IV (Product)    | LR Precision class 3                 | 0.8    | 0.184    | False |
+| Table IV (Product)    | LR Precision class 4                 | 0.78   | 0.486    | False |
+| Table IV (Product)    | BN Precision class 1                 | 1.0    | 0.472    | False |
+| Table IV (Product)    | BN Precision class 2                 | 0.65   | 0.475    | False |
+| Table IV (Product)    | BN Precision class 3                 | 0.81   | 0.554    | False |
+| Table IV (Product)    | BN Precision class 4                 | 0.78   | 0.513    | False |
+| Table IV (Product)    | LiNGAM-BN Precision class 1          | 0.99   | 0.41     | False |
+| Table IV (Product)    | LiNGAM-BN Precision class 2          | 0.76   | 0.389    | False |
+| Table IV (Product)    | LiNGAM-BN Precision class 3          | 0.78   | 0.421    | False |
+| Table IV (Product)    | LiNGAM-BN Precision class 4          | 0.78   | 0.603    | False |
+| Table IV (Product)    | RF Recall class 1                    | 0.73   | 0.626    | False |
+| Table IV (Product)    | RF Recall class 2                    | 0.64   | 0.458    | False |
+| Table IV (Product)    | RF Recall class 3                    | 0.76   | 0.327    | False |
+| Table IV (Product)    | RF Recall class 4                    | 0.91   | 0.676    | False |
+| Table IV (Product)    | LR Recall class 1                    | 0.69   | 0.708    | False |
+| Table IV (Product)    | LR Recall class 2                    | 0.67   | 0.298    | False |
+| Table IV (Product)    | LR Recall class 3                    | 0.73   | 0.06     | False |
+| Table IV (Product)    | LR Recall class 4                    | 0.99   | 0.603    | False |
+| Table IV (Product)    | BN Recall class 1                    | 0.67   | 0.728    | False |
+| Table IV (Product)    | BN Recall class 2                    | 0.76   | 0.345    | False |
+| Table IV (Product)    | BN Recall class 3                    | 0.72   | 0.273    | False |
+| Table IV (Product)    | BN Recall class 4                    | 1.0    | 0.559    | True  |
+| Table IV (Product)    | LiNGAM-BN Recall class 1             | 0.73   | 0.687    | False |
+| Table IV (Product)    | LiNGAM-BN Recall class 2             | 0.73   | 0.345    | False |
+| Table IV (Product)    | LiNGAM-BN Recall class 3             | 0.81   | 0.267    | False |
+| Table IV (Product)    | LiNGAM-BN Recall class 4             | 1.0    | 0.408    | False |
+| Table IV (Product)    | RF F1 class 1                        | 0.79   | 0.68     | False |
+| Table IV (Product)    | RF F1 class 2                        | 0.66   | 0.439    | False |
+| Table IV (Product)    | RF F1 class 3                        | 0.72   | 0.343    | False |
+| Table IV (Product)    | RF F1 class 4                        | 0.86   | 0.624    | False |
+| Table IV (Product)    | LR F1 class 1                        | 0.78   | 0.577    | False |
+| Table IV (Product)    | LR F1 class 2                        | 0.65   | 0.327    | False |
+| Table IV (Product)    | LR F1 class 3                        | 0.77   | 0.09     | False |
+| Table IV (Product)    | LR F1 class 4                        | 0.88   | 0.539    | False |
+| Table IV (Product)    | BN F1 class 1                        | 0.8    | 0.573    | False |
+| Table IV (Product)    | BN F1 class 2                        | 0.7    | 0.4      | False |
+| Table IV (Product)    | BN F1 class 3                        | 0.76   | 0.366    | False |
+| Table IV (Product)    | BN F1 class 4                        | 0.87   | 0.535    | False |
+| Table IV (Product)    | LiNGAM-BN F1 class 1                 | 0.84   | 0.513    | False |
+| Table IV (Product)    | LiNGAM-BN F1 class 2                 | 0.74   | 0.366    | False |
+| Table IV (Product)    | LiNGAM-BN F1 class 3                 | 0.79   | 0.327    | False |
+| Table IV (Product)    | LiNGAM-BN F1 class 4                 | 0.88   | 0.487    | False |
+| Table IV (Core)       | RF Precision class 1                 | 0.83   | 0.651    | False |
+| Table IV (Core)       | RF Precision class 2                 | 0.69   | 0.435    | False |
+| Table IV (Core)       | RF Precision class 3                 | 0.74   | 0.449    | False |
+| Table IV (Core)       | RF Precision class 4                 | 0.77   | 0.654    | False |
+| Table IV (Core)       | LR Precision class 1                 | 0.94   | 0.444    | False |
+| Table IV (Core)       | LR Precision class 2                 | 0.67   | 0.401    | False |
+| Table IV (Core)       | LR Precision class 3                 | 0.72   | 0.371    | False |
+| Table IV (Core)       | LR Precision class 4                 | 0.81   | 0.602    | False |
+| Table IV (Core)       | BN Precision class 1                 | 1.0    | 0.428    | False |
+| Table IV (Core)       | BN Precision class 2                 | 0.78   | 0.381    | False |
+| Table IV (Core)       | BN Precision class 3                 | 0.74   | 0.455    | False |
+| Table IV (Core)       | BN Precision class 4                 | 0.71   | 0.569    | False |
+| Table IV (Core)       | LiNGAM-BN Precision class 1          | 0.94   | 0.417    | False |
+| Table IV (Core)       | LiNGAM-BN Precision class 2          | 0.79   | 0.36     | False |
+| Table IV (Core)       | LiNGAM-BN Precision class 3          | 0.81   | 0.433    | False |
+| Table IV (Core)       | LiNGAM-BN Precision class 4          | 0.85   | 0.558    | False |
+| Table IV (Core)       | RF Recall class 1                    | 0.7    | 0.608    | False |
+| Table IV (Core)       | RF Recall class 2                    | 0.69   | 0.516    | False |
+| Table IV (Core)       | RF Recall class 3                    | 0.74   | 0.44     | False |
+| Table IV (Core)       | RF Recall class 4                    | 0.91   | 0.565    | False |
+| Table IV (Core)       | LR Recall class 1                    | 0.62   | 0.651    | False |
+| Table IV (Core)       | LR Recall class 2                    | 0.78   | 0.455    | False |
+| Table IV (Core)       | LR Recall class 3                    | 0.77   | 0.261    | False |
+| Table IV (Core)       | LR Recall class 4                    | 0.9    | 0.392    | False |
+| Table IV (Core)       | BN Recall class 1                    | 0.62   | 0.622    | True  |
+| Table IV (Core)       | BN Recall class 2                    | 0.73   | 0.342    | False |
+| Table IV (Core)       | BN Recall class 3                    | 0.8    | 0.366    | False |
+| Table IV (Core)       | BN Recall class 4                    | 1.0    | 0.477    | False |
+| Table IV (Core)       | LiNGAM-BN Recall class 1             | 0.76   | 0.578    | False |
+| Table IV (Core)       | LiNGAM-BN Recall class 2             | 0.82   | 0.371    | False |
+| Table IV (Core)       | LiNGAM-BN Recall class 3             | 0.88   | 0.331    | False |
+| Table IV (Core)       | LiNGAM-BN Recall class 4             | 0.92   | 0.444    | False |
+| Table IV (Core)       | RF F1 class 1                        | 0.76   | 0.629    | False |
+| Table IV (Core)       | RF F1 class 2                        | 0.69   | 0.472    | False |
+| Table IV (Core)       | RF F1 class 3                        | 0.74   | 0.444    | False |
+| Table IV (Core)       | RF F1 class 4                        | 0.83   | 0.606    | False |
+| Table IV (Core)       | LR F1 class 1                        | 0.75   | 0.528    | False |
+| Table IV (Core)       | LR F1 class 2                        | 0.72   | 0.427    | False |
+| Table IV (Core)       | LR F1 class 3                        | 0.74   | 0.306    | False |
+| Table IV (Core)       | LR F1 class 4                        | 0.85   | 0.475    | False |
+| Table IV (Core)       | BN F1 class 1                        | 0.77   | 0.507    | False |
+| Table IV (Core)       | BN F1 class 2                        | 0.75   | 0.361    | False |
+| Table IV (Core)       | BN F1 class 3                        | 0.77   | 0.405    | False |
+| Table IV (Core)       | BN F1 class 4                        | 0.83   | 0.519    | False |
+| Table IV (Core)       | LiNGAM-BN F1 class 1                 | 0.84   | 0.484    | False |
+| Table IV (Core)       | LiNGAM-BN F1 class 2                 | 0.8    | 0.365    | False |
+| Table IV (Core)       | LiNGAM-BN F1 class 3                 | 0.84   | 0.375    | False |
+| Table IV (Core)       | LiNGAM-BN F1 class 4                 | 0.89   | 0.495    | False |
+| Table V (vs macro-F1) | Core RF                              | 0.754  | 0.538    | False |
+| Table V (vs macro-F1) | Core LR                              | 0.766  | 0.434    | False |
+| Table V (vs macro-F1) | Core BN                              | 0.778  | 0.448    | False |
+| Table V (vs macro-F1) | Core LiNGAM-BN                       | 0.842  | 0.43     | False |
+| Table V (vs macro-F1) | Product RF                           | 0.757  | 0.521    | False |
+| Table V (vs macro-F1) | Product LR                           | 0.768  | 0.383    | False |
+| Table V (vs macro-F1) | Product BN                           | 0.785  | 0.468    | False |
+| Table V (vs macro-F1) | Product LiNGAM-BN                    | 0.812  | 0.423    | False |
+| Table VII             | Product Count                        | 144    | 327.0    | False |
+| Table VII             | Product Mean                         | 0.424  | 31.758   | False |
+| Table VII             | Product Max                          | 2.0    | 560.0    | False |
+| Table VII             | Core Count                           | 385    | 665.0    | False |
+| Table VII             | Core Mean                            | 1.564  | 13.417   | False |
+| Table VII             | Core Max                             | 112.0  | 249.0    | False |
+| Table VIII            | Core LR                              | 0.861  | 0.6637   | False |
+| Table VIII            | Core RF                              | 0.845  | 0.7513   | False |
+| Table VIII            | Core BN                              | 0.861  | 0.7325   | False |
+| Table VIII            | Core LiNGAM+LR                       | 0.861  | 0.6658   | False |
+| Table VIII            | Core LiNGAM+RF                       | 0.837  | 0.7112   | False |
+| Table VIII            | Core LiNGAM+BN                       | 0.912  | 0.7174   | False |
+| Table VIII            | Core LiNGAM+BN(Multi-class)          | 0.84   | 0.4286   | False |
+| Table VIII            | Product LR                           | 0.879  | 0.7341   | False |
+| Table VIII            | Product RF                           | 0.879  | 0.7905   | False |
+| Table VIII            | Product BN                           | 0.882  | 0.7254   | False |
+| Table VIII            | Product LiNGAM+LR                    | 0.876  | 0.6922   | False |
+| Table VIII            | Product LiNGAM+RF                    | 0.873  | 0.6879   | False |
+| Table VIII            | Product LiNGAM+BN                    | 0.936  | 0.6965   | False |
+| Table VIII            | Product LiNGAM+BN(Multi-class)       | 0.816  | 0.4408   | False |

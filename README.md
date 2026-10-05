@@ -9,7 +9,7 @@ This package computes every data-derived table and figure of the paper from the 
 | `data/raw/core/summary.csv`, `data/raw/product/summary.csv` | Original extracted Bugzilla@Mozilla reports (83,175 Core, 88,168 Product), the input of the original analysis code (`exec/lingam_s.py`, `exec/bn_t.py`) |
 | `data/lingam/{core,product}/lingam_tce_user_not_newcomer_filter_wtf_fixed*.csv` | Original 100-sample bootstrap DirectLiNGAM outputs, 4 BFT classes (all reports + each class) |
 | `data/lingam/{core,product}/lingam_tce_user_not_newcomer_filter_2_wtf_fixed*.csv` | Same, 2 BFT classes (Core ≤ 9 days, Product ≤ 4 days) |
-| `data/models/{core,product}/bn_model_wtf*_hc_bdeu_none.pkl` | Original saved bnlearn BN structures from `exec/bn_t.py` (Feb/May 2025), used by the paper protocol because hill-climbing is not exactly deterministic |
+| `data/models/{core,product}/bn_model_wtf*_hc_bdeu_none.pkl` | Saved bnlearn BN structures used by the paper protocol, because hill-climbing is not exactly deterministic: the original models from `exec/bn_t.py` (Feb/May 2025), except the Core 2-class BN, whose original file had been overwritten and which was re-learned once with the same procedure |
 | `data/paper_result/heatmap_{core,product}.csv` | Values plotted in the manuscript's Figures 5-6 (Core "Assigned Days(Class)" class 1 corrected to −0.063 on 2026-10-01); used only for the comparison step |
 
 Bugzilla collection is not re-run.
@@ -41,13 +41,13 @@ Outputs go to `output/tables/` (CSV + Markdown) and `output/figures/`.
 | Step | Paper artifact | How it is computed |
 |---|---|---|
 | 01 | Data funnel | Row counts after each filter and input SHA-256 (`01_data_collection.csv`) |
-| 02 | Table 1 | BFT class counts of the analysis subset (`lingam_s.process(filter=True)` + `check_train`: IQR on working time, severity/priority changed, FIXED, not self-reported, not newcomer) |
-| 03 | Figures 5, 6 | Signed LiNGAM total effect of each factor on BFT, for all reports and each class (`lingam_s.evaluate_tce`), from `data/lingam/` or a fresh bootstrap |
-| 04 | Table 3 | Paper rule applied to the Figure 5/6 values: S \|v\|>5, M 1-5, W <1, N none; Product/Core when they differ |
-| 05 | Tables 4-7 | RF, LR, BN (hill-climbing, BDeu) and LiNGAM-BN (BN structure = LiNGAM edges with bootstrap probability ≥ 0.8, as in `bn_t.get_lingam_edge`) trained on a stratified 80/20 split, seed 42. Table 7: Cliff's delta vs RF over 10 stratified folds of the test set; paired permutation p-value (1,000 permutations) |
-| 06 | Tables 8, 9 | Table 8: BFT of test reports that LiNGAM-BN predicts as class 1. Table 9: binary task with the 2-class LiNGAM outputs; LiNGAM+X use factors with a LiNGAM path to BFT with probability ≥ 0.8 |
+| 02 | Table I | BFT class counts of the analysis subset (`lingam_s.process(filter=True)` + `check_train`: IQR on working time, severity/priority changed, FIXED, not self-reported, not newcomer) |
+| 03 | Figs. 5, 6 | Signed LiNGAM total effect of each factor on BFT, for all reports and each class (`lingam_s.evaluate_tce`), from `data/lingam/` or a fresh bootstrap |
+| 04 | Table III | Paper rule applied to the Figure 5/6 values: S \|v\|>5, M 1-5, W <1, N none; Product/Core when they differ |
+| 05 | Tables IV-VI | RF, LR, BN (hill-climbing, BDeu) and LiNGAM-BN (BN structure = LiNGAM edges with bootstrap probability ≥ 0.8, as in `bn_t.get_lingam_edge`) trained on a stratified 80/20 split, seed 42. Table 7: Cliff's delta vs RF over 10 stratified folds of the test set; paired permutation p-value (1,000 permutations) |
+| 06 | Tables VII, VIII | Table VII: BFT of test reports that LiNGAM-BN predicts as class 1. Table VIII: binary task with the 2-class LiNGAM outputs; LiNGAM+X use factors with a LiNGAM path to BFT with probability ≥ 0.8 |
 | 07 | — | `07_paper_vs_computed.csv`: each manuscript value next to the computed one |
-| 08 | Tables 4-7, 9 (paper protocol) | `paper_protocol.py`, a re-implementation of `exec/bn_t.py`, the code that produced the manuscript's BN / LiNGAM-BN results. Output in `output/paper_protocol/tables/`, including `08_protocol_diagnostics.csv` |
+| 08 | Tables IV-VIII (paper protocol) | `paper_protocol.py`, a re-implementation of `exec/bn_t.py`, the code that produced the manuscript's BN / LiNGAM-BN results. Output in `output/paper_protocol/tables/`, including `08_protocol_diagnostics.csv` |
 
 ## Two evaluation protocols
 
@@ -81,14 +81,14 @@ LiNGAM-BN is highest only when the test reports are part of its training data. I
 
 | Manuscript table (current numbering) | Package output |
 |---|---|
-| Table I: BFT distribution | `table_1_*` |
+| Table I: BFT distribution | `table_I_*` |
 | Fig. 5, 6: causal-strength heatmaps | `figure_5/6_*` |
-| Table III: strength and direction | `table_3_*` |
-| Table IV: P / R / F1 (Product + Core) | `paper_protocol/table_4_*`, `table_5_*` |
-| Table V: macro-F1 | `paper_protocol/table_6_*` |
-| Table VI: F1, Cliff's delta, p | `paper_protocol/table_7_*` |
-| Table VII: short-duration BFT statistics | `paper_protocol/table_8_*` |
-| Table VIII: binary accuracy | `paper_protocol/table_9_*` |
+| Table III: strength and direction | `table_III_*` |
+| Table IV: P / R / F1 (Product + Core) | `paper_protocol/table_IV_*` |
+| Table V: macro-F1 | `paper_protocol/table_V_*` |
+| Table VI: F1, Cliff's delta, p | `paper_protocol/table_VI_*` |
+| Table VII: short-duration BFT statistics | `paper_protocol/table_VII_*` |
+| Table VIII: binary accuracy | `paper_protocol/table_VIII_*` |
 
 **Note on RF / LR.** No RF / LR code survives in `exec/`. The RF, LR, LiNGAM+LR and LiNGAM+RF results reported in the manuscript (revised 2026-10-01) are the reconstruction in this package (the BNs' inputs, fitted on the training split), as are the effect sizes, p-values and short-duration statistics, which the manuscript now reports as computed here.
 

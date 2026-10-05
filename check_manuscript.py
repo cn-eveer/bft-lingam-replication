@@ -89,7 +89,7 @@ def compare(table: str, item: str, printed: str, computed, source: str) -> None:
 
 def check_table1(section: Path) -> None:
     rows = table_rows((section / "data.tex").read_text(), "tab:bug_report_stats")
-    comp = pd.read_csv(HELD / "table_1_bug_fixing_time_distribution.csv").fillna("")
+    comp = pd.read_csv(HELD / "table_I_bft_distribution.csv").fillna("")
     group = ""
     for r in rows:
         if len(r) < 7 or not r[2] or r[2].startswith("BFT Class") or r[0] == "Bug Type":
@@ -97,15 +97,15 @@ def check_table1(section: Path) -> None:
         group = r[0] or group
         hit = comp[(comp["Bug Type"] == group) & (comp["Project"].str.lower() == r[1].lower())]
         if hit.empty:
-            compare("Table 1", f"{group} {r[1]}", r[6], None, "held-out Table 1")
+            compare("Table I", f"{group} {r[1]}", r[6], None, "held-out Table I")
             continue
         h = hit.iloc[0]
         for c, col in enumerate(CLASS_COLS):
             n, pct = re.match(r"\s*([\d,]+)\s*\(\s*([\d.]+)%\)", r[2 + c]).groups()
             cn, cpct = re.match(r"\s*([\d,]+)\s*\(\s*([\d.]+)%\)", str(h[col])).groups()
-            compare("Table 1", f"{group} {r[1]} class {c + 1} count", n, float(cn.replace(",", "")), "output/tables")
-            compare("Table 1", f"{group} {r[1]} class {c + 1} %", pct, float(cpct), "output/tables")
-        compare("Table 1", f"{group} {r[1]} total", r[6], float(h["Total"]), "output/tables")
+            compare("Table I", f"{group} {r[1]} class {c + 1} count", n, float(cn.replace(",", "")), "output/tables")
+            compare("Table I", f"{group} {r[1]} class {c + 1} %", pct, float(cpct), "output/tables")
+        compare("Table I", f"{group} {r[1]} total", r[6], float(h["Total"]), "output/tables")
 
 
 def check_heatmaps() -> None:
@@ -119,23 +119,23 @@ def check_heatmaps() -> None:
                     continue
                 # heatmap annotations use 2 significant digits
                 ok = (not pd.isna(pv) and not pd.isna(cv) and float(f"{cv:.2g}") == float(f"{pv:.2g}"))
-                RESULTS.append({"Table": f"Figure heat_{d}", "Item": f"{f} {pc}", "Paper": pv,
+                RESULTS.append({"Table": f"Figure 5 (Core)" if d == "core" else "Figure 6 (Product)", "Item": f"{f} {pc}", "Paper": pv,
                                 "Computed": cv, "Source": "output/tables", "Match": bool(ok)})
 
 
 def check_table3(section: Path) -> None:
     rows = table_rows((section / "results" / "RQ2.tex").read_text(), "tab:causal_effects_merged")
-    comp = pd.read_csv(HELD / "table_3_lingam_strength_direction.csv").set_index("Factor")
+    comp = pd.read_csv(HELD / "table_III_strength_direction.csv").set_index("Factor")
     for r in rows:
         if len(r) == 6 and r[1] in comp.index:
             for c, col in enumerate(CLASS_COLS):
-                compare("Table 3", f"{r[1]} class {c + 1}", r[2 + c], comp.loc[r[1], col], "output/tables")
+                compare("Table III", f"{r[1]} class {c + 1}", r[2 + c], comp.loc[r[1], col], "output/tables")
 
 
 def check_performance(section: Path) -> None:
     rows = table_rows((section / "results" / "RQ3.tex").read_text(), "tab:performance_by_model")
-    comp = {"Product": pd.read_csv(PAPER / "table_4_prediction_product.csv"),
-            "Core": pd.read_csv(PAPER / "table_5_prediction_core.csv")}
+    comp = {"Product": pd.read_csv(PAPER / "table_IV_performance_product.csv"),
+            "Core": pd.read_csv(PAPER / "table_IV_performance_core.csv")}
     scope = ""
     for r in rows:
         if len(r) != 14 or r[2] == "P" or not num(r[2]):
@@ -145,22 +145,22 @@ def check_performance(section: Path) -> None:
             for k, metric in enumerate(["Precision", "Recall", "F1"]):
                 t = comp[scope]
                 v = t[(t["Model"] == r[1]) & (t["Metric"] == metric)][col].iloc[0]
-                compare("Table performance (P/R/F1)", f"{scope} {r[1]} {metric} class {c + 1}", r[2 + 3 * c + k], v,
+                compare("Table IV (P/R/F1)", f"{scope} {r[1]} {metric} class {c + 1}", r[2 + 3 * c + k], v,
                         "output/paper_protocol")
 
 
 def check_macro(section: Path) -> None:
     rows = table_rows((section / "results" / "RQ3.tex").read_text(), "tab:summary_accuracy_only")
-    comp = pd.read_csv(PAPER / "table_6_macro_f1.csv").set_index("Model")
+    comp = pd.read_csv(PAPER / "table_V_macro_f1.csv").set_index("Model")
     for r in rows:
         if len(r) == 3 and r[0] in comp.index:
-            compare("Table macro-F1", f"Core {r[0]}", r[1], comp.loc[r[0], "Core macro-F1"], "output/paper_protocol")
-            compare("Table macro-F1", f"Product {r[0]}", r[2], comp.loc[r[0], "Product macro-F1"], "output/paper_protocol")
+            compare("Table V (macro-F1)", f"Core {r[0]}", r[1], comp.loc[r[0], "Core macro-F1"], "output/paper_protocol")
+            compare("Table V (macro-F1)", f"Product {r[0]}", r[2], comp.loc[r[0], "Product macro-F1"], "output/paper_protocol")
 
 
 def check_effects(section: Path) -> None:
     rows = table_rows((section / "results" / "RQ3.tex").read_text(), "tab:classwise_f1_effect")
-    comp = pd.read_csv(PAPER / "table_7_effect_size_f1.csv")
+    comp = pd.read_csv(PAPER / "table_VI_effect_size_f1.csv")
     cls = ""
     for r in rows:
         if len(r) != 6 or r[1] in ("", "Model"):
@@ -169,29 +169,29 @@ def check_effects(section: Path) -> None:
         c = int(cls[0])
         hit = comp[(comp["Class"] == CLASS_COLS[c - 1]) & (comp["Model"] == r[1])].iloc[0]
         for scope, fi, di in [("Core", 2, 3), ("Product", 4, 5)]:
-            compare("Table effect size (F1)", f"class {c} {r[1]} {scope} F1", r[fi], hit[f"{scope} F1"], "output/paper_protocol")
+            compare("Table VI (F1)", f"class {c} {r[1]} {scope} F1", r[fi], hit[f"{scope} F1"], "output/paper_protocol")
             if r[di] != "--":
                 pd_, pp = r[di].split("/")
                 cd, cp = hit[f"{scope} d/p"].split("/")
-                compare("Table effect size (d)", f"class {c} {r[1]} {scope} d", pd_, float(cd), "output/paper_protocol")
-                compare("Table effect size (p)", f"class {c} {r[1]} {scope} p", pp, float(cp), "output/paper_protocol")
+                compare("Table VI (Cliff's d)", f"class {c} {r[1]} {scope} d", pd_, float(cd), "output/paper_protocol")
+                compare("Table VI (p)", f"class {c} {r[1]} {scope} p", pp, float(cp), "output/paper_protocol")
 
 
 def check_rq4(section: Path) -> None:
     tex = (section / "results" / "RQ4.tex").read_text()
-    comp = pd.read_csv(PAPER / "table_8_short_duration_bft_stats.csv").set_index("Metric")
+    comp = pd.read_csv(PAPER / "table_VII_short_duration_bft_stats.csv").set_index("Metric")
     for r in table_rows(tex, "tab:class1_stats_lingam"):
         if len(r) == 3 and r[0] in comp.index:
-            compare("Table short-duration stats", f"Product {r[0]}", r[1], comp.loc[r[0], "Product"], "output/paper_protocol")
-            compare("Table short-duration stats", f"Core {r[0]}", r[2], comp.loc[r[0], "Core"], "output/paper_protocol")
-    comp = pd.read_csv(PAPER / "table_9_binary_classification_accuracy.csv")
+            compare("Table VII", f"Product {r[0]}", r[1], comp.loc[r[0], "Product"], "output/paper_protocol")
+            compare("Table VII", f"Core {r[0]}", r[2], comp.loc[r[0], "Core"], "output/paper_protocol")
+    comp = pd.read_csv(PAPER / "table_VIII_binary_accuracy.csv")
     comp["key"] = comp["Model"].str.replace(" ", "")
     comp = comp.set_index("key")
     for r in table_rows(tex, "tab:binary_class_accuracy"):
         key = r[0].replace(" ", "")
         if len(r) == 3 and key in comp.index:
-            compare("Table binary accuracy", f"Core {r[0]}", r[1], comp.loc[key, "Core Accuracy"], "output/paper_protocol")
-            compare("Table binary accuracy", f"Product {r[0]}", r[2], comp.loc[key, "Product Accuracy"], "output/paper_protocol")
+            compare("Table VIII", f"Core {r[0]}", r[1], comp.loc[key, "Core Accuracy"], "output/paper_protocol")
+            compare("Table VIII", f"Product {r[0]}", r[2], comp.loc[key, "Product Accuracy"], "output/paper_protocol")
 
 
 def main() -> None:

@@ -71,7 +71,7 @@ def preprocess_bnt(raw: pd.DataFrame, thresholds: tuple[float, ...] = (1, 7, 30)
     """exec/bn_t.py process(df, data_type, filter=True) + the FIXED / self / newcomer filter.
 
     `thresholds` are the BFT class cut points: (1, 7, 30) gives 4 classes,
-    a single value (e.g. (9,)) gives the 2-class split used for Table 9."""
+    a single value (e.g. (9,)) gives the 2-class split used for Table VIII."""
     df = raw.copy()
     df["raw_fixing_time"] = df["fixing_time"]
     df["priority"] = df["priority"].map({"P1": "high", "P2": "medium", "P3": "medium",
