@@ -1,0 +1,10 @@
+| Setting           | Task    | Drop refined LiNGAM-BN | Drop RF | H1: smaller drop than RF | Transfer macro-F1 difference (refined LiNGAM-BN - RF) | 95% CI low | 95% CI high | H2: CI above 0 |
+| ----------------- | ------- | ---------------------- | ------- | ------------------------ | ----------------------------------------------------- | ---------- | ----------- | -------------- |
+| Core -> Product   | 4class  | 0.003                  | 0.019   | True                     | -0.044                                                | -0.061     | -0.025      | False          |
+| Core -> Product   | binary7 | 0.001                  | 0.022   | True                     | -0.02                                                 | -0.036     | -0.003      | False          |
+| Product -> Core   | 4class  | 0.007                  | 0.055   | True                     | -0.053                                                | -0.063     | -0.043      | False          |
+| Product -> Core   | binary7 | -0.015                 | 0.017   | True                     | -0.044                                                | -0.051     | -0.036      | False          |
+| Core, temporal    | 4class  | -0.064                 | -0.0    | True                     | -0.036                                                | -0.057     | -0.013      | False          |
+| Core, temporal    | binary7 | -0.058                 | 0.018   | True                     | 0.001                                                 | -0.017     | 0.019       | False          |
+| Product, temporal | 4class  | -0.077                 | -0.024  | True                     | -0.006                                                | -0.049     | 0.036       | False          |
+| Product, temporal | binary7 | -0.034                 | -0.018  | True                     | -0.025                                                | -0.059     | 0.008       | False          |

@@ -1,9 +1,0 @@
-Model,Core Accuracy,Product Accuracy
-LR,0.6637,0.7341
-RF,0.7513,0.7905
-BN,0.7325,0.7254
-LiNGAM+LR,0.6658,0.6922
-LiNGAM+RF,0.7112,0.6879
-LiNGAM+BN,0.7174,0.6965
-LiNGAM+BN(Multi-class),0.4286,0.4408
-Majority baseline,0.5699,0.5621

@@ -22,7 +22,6 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 HELD = HERE / "output" / "tables"
-PAPER = HERE / "output" / "paper_protocol" / "tables"
 CLASS_COLS = ["Class 1 (<=1d)", "Class 2 (2-7d)", "Class 3 (8-30d)", "Class 4 (>=31d)"]
 
 
@@ -55,6 +54,7 @@ def clean(cell: str) -> str:
     cell = re.sub(r"\\multirow\{[^}]*\}\{[^}]*\}\{([^}]*)\}", r"\1", cell)
     for cmd in ["textbf", "underline", "textit", "emph", "makecell"]:
         cell = re.sub(rf"\\{cmd}\{{([^{{}}]*)\}}", r"\1", cell)
+    cell = cell.replace("$^\\dagger$", "\u2020").replace("$-$", "-")
     cell = cell.replace("\\%", "%").replace("{", "").replace("}", "")
     return " ".join(cell.split())
 
@@ -134,8 +134,8 @@ def check_table3(section: Path) -> None:
 
 def check_performance(section: Path) -> None:
     rows = table_rows((section / "results" / "RQ3.tex").read_text(), "tab:performance_by_model")
-    comp = {"Product": pd.read_csv(PAPER / "table_IV_performance_product.csv"),
-            "Core": pd.read_csv(PAPER / "table_IV_performance_core.csv")}
+    comp = {"Product": pd.read_csv(HELD / "table_IV_performance_product.csv"),
+            "Core": pd.read_csv(HELD / "table_IV_performance_core.csv")}
     scope = ""
     for r in rows:
         if len(r) != 14 or r[2] == "P" or not num(r[2]):
@@ -146,21 +146,21 @@ def check_performance(section: Path) -> None:
                 t = comp[scope]
                 v = t[(t["Model"] == r[1]) & (t["Metric"] == metric)][col].iloc[0]
                 compare("Table IV (P/R/F1)", f"{scope} {r[1]} {metric} class {c + 1}", r[2 + 3 * c + k], v,
-                        "output/paper_protocol")
+                        "output/tables")
 
 
 def check_macro(section: Path) -> None:
     rows = table_rows((section / "results" / "RQ3.tex").read_text(), "tab:summary_accuracy_only")
-    comp = pd.read_csv(PAPER / "table_V_macro_f1.csv").set_index("Model")
+    comp = pd.read_csv(HELD / "table_V_macro_f1.csv").set_index("Model")
     for r in rows:
         if len(r) == 3 and r[0] in comp.index:
-            compare("Table V (macro-F1)", f"Core {r[0]}", r[1], comp.loc[r[0], "Core macro-F1"], "output/paper_protocol")
-            compare("Table V (macro-F1)", f"Product {r[0]}", r[2], comp.loc[r[0], "Product macro-F1"], "output/paper_protocol")
+            compare("Table V (macro-F1)", f"Core {r[0]}", r[1], comp.loc[r[0], "Core"], "output/tables")
+            compare("Table V (macro-F1)", f"Product {r[0]}", r[2], comp.loc[r[0], "Product"], "output/tables")
 
 
 def check_effects(section: Path) -> None:
     rows = table_rows((section / "results" / "RQ3.tex").read_text(), "tab:classwise_f1_effect")
-    comp = pd.read_csv(PAPER / "table_VI_effect_size_f1.csv")
+    comp = pd.read_csv(HELD / "table_VI_effect_size_f1.csv")
     cls = ""
     for r in rows:
         if len(r) != 6 or r[1] in ("", "Model"):
@@ -169,36 +169,67 @@ def check_effects(section: Path) -> None:
         c = int(cls[0])
         hit = comp[(comp["Class"] == CLASS_COLS[c - 1]) & (comp["Model"] == r[1])].iloc[0]
         for scope, fi, di in [("Core", 2, 3), ("Product", 4, 5)]:
-            compare("Table VI (F1)", f"class {c} {r[1]} {scope} F1", r[fi], hit[f"{scope} F1"], "output/paper_protocol")
+            compare("Table VI (F1)", f"class {c} {r[1]} {scope} F1", r[fi], hit[f"{scope} F1"], "output/tables")
             if r[di] != "--":
                 pd_, pp = r[di].split("/")
                 cd, cp = hit[f"{scope} d/p"].split("/")
-                compare("Table VI (Cliff's d)", f"class {c} {r[1]} {scope} d", pd_, float(cd), "output/paper_protocol")
-                compare("Table VI (p)", f"class {c} {r[1]} {scope} p", pp, float(cp), "output/paper_protocol")
+                compare("Table VI (Cliff's d)", f"class {c} {r[1]} {scope} d", pd_, float(cd), "output/tables")
+                compare("Table VI (p)", f"class {c} {r[1]} {scope} p", pp, float(cp), "output/tables")
 
 
 def check_rq4(section: Path) -> None:
     tex = (section / "results" / "RQ4.tex").read_text()
-    comp = pd.read_csv(PAPER / "table_VII_short_duration_bft_stats.csv").set_index("Metric")
-    for r in table_rows(tex, "tab:class1_stats_lingam"):
-        if len(r) == 3 and r[0] in comp.index:
-            compare("Table VII", f"Product {r[0]}", r[1], comp.loc[r[0], "Product"], "output/paper_protocol")
-            compare("Table VII", f"Core {r[0]}", r[2], comp.loc[r[0], "Core"], "output/paper_protocol")
-    comp = pd.read_csv(PAPER / "table_VIII_binary_accuracy.csv")
-    comp["key"] = comp["Model"].str.replace(" ", "")
-    comp = comp.set_index("key")
+    comp = pd.read_csv(HELD / "table_VII_binary_classification.csv").set_index("Model")
+    alias = {"LiNGAM-BN": "LiNGAM+BN"}
     for r in table_rows(tex, "tab:binary_class_accuracy"):
-        key = r[0].replace(" ", "")
-        if len(r) == 3 and key in comp.index:
-            compare("Table VIII", f"Core {r[0]}", r[1], comp.loc[key, "Core Accuracy"], "output/paper_protocol")
-            compare("Table VIII", f"Product {r[0]}", r[2], comp.loc[key, "Product Accuracy"], "output/paper_protocol")
+        model = alias.get(r[0], r[0])
+        if len(r) != 5 or model not in comp.index:
+            continue
+        for k, col in enumerate(["Core Accuracy", "Core Macro-F1", "Product Accuracy", "Product Macro-F1"]):
+            if r[1 + k] != "--":
+                compare("Table VII", f"{r[0]} {col}", r[1 + k], comp.loc[model, col], "output/tables")
+    sens = pd.read_csv(HELD / "table_VIII_threshold_sensitivity.csv")
+    sens = sens[sens["Outliers"] == "removed (IQR)"]
+    cols = ["Majority accuracy", "RF macro-F1", "LR macro-F1", "BN macro-F1", "LiNGAM-BN macro-F1",
+            "Refined LiNGAM-BN macro-F1"]
+    for r in table_rows(tex, "tab:threshold_sensitivity"):
+        if len(r) != 13 or not num(r[0]) or not num(r[1]):
+            continue
+        thr = int(num(r[0])[0])
+        for scope, off in [("Core", 1), ("Product", 7)]:
+            hit = sens[(sens["Scope"] == scope) & (sens["Threshold (days)"] == thr)].iloc[0]
+            for k, col in enumerate(cols):
+                compare("Table VIII", f"{scope} {thr}d {col}", r[off + k], hit[col], "output/tables")
+
+
+def check_transfer(section: Path) -> None:
+    """Table IX (transfer experiment), when the manuscript reports it."""
+    if not (section / "results" / "RQ5.tex").exists():
+        return
+    rows = table_rows((section / "results" / "RQ5.tex").read_text(), "tab:transfer")
+    full = pd.read_csv(HELD / "table_IX_transfer.csv")
+    summ = pd.read_csv(HELD / "table_IX_transfer_summary.csv")
+    tasks = {"4 classes": "4class", "$\\leq$7 days": "binary7"}
+    for r in rows:
+        if len(r) != 9 or r[1] not in tasks:
+            continue
+        setting = r[0].replace("$\\rightarrow$", "->").replace("  ", " ")
+        task = tasks[r[1]]
+        g = full[(full["Setting"] == setting) & (full["Task"] == task)].set_index("Model")
+        for k, m in enumerate(["RF", "BN", "Refined LiNGAM-BN"]):
+            compare("Table IX", f"{setting} {task} {m} in-dist", r[2 + 2 * k], g.loc[m, "In-distribution macro-F1"], "output/tables")
+            compare("Table IX", f"{setting} {task} {m} transfer", r[3 + 2 * k], g.loc[m, "Transfer macro-F1"], "output/tables")
+        sm = summ[(summ["Setting"] == setting) & (summ["Task"] == task)].iloc[0]
+        vals = re.findall(r"-?\d+\.\d+", r[8])
+        for v, col in zip(vals, ["Transfer macro-F1 difference (refined LiNGAM-BN - RF)", "95% CI low", "95% CI high"]):
+            compare("Table IX", f"{setting} {task} {col}", v, sm[col], "output/tables")
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--section", type=Path, default=HERE.parent / "section")
     args = ap.parse_args()
-    if not PAPER.exists():
+    if not (HELD / "table_VIII_threshold_sensitivity.csv").exists():
         raise SystemExit("Run `python analyze.py` first.")
     check_table1(args.section)
     check_heatmaps()
@@ -207,6 +238,7 @@ def main() -> None:
     check_macro(args.section)
     check_effects(args.section)
     check_rq4(args.section)
+    check_transfer(args.section)
     out = pd.DataFrame(RESULTS)
     out.to_csv(HERE / "output" / "manuscript_check.csv", index=False)
     summary = out.groupby("Table", sort=False)["Match"].agg(Matched="sum", Total="count").reset_index()

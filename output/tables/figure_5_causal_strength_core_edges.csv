@@ -1,0 +1,50 @@
+Class,Factor,Direction,Effect,Probability
+all,Total Resolution Time,BFT -> Factor,0.9878,1.0
+all,Assigned Days,BFT -> Factor,0.3786,1.0
+all,BFT(Class),BFT -> Factor,0.0194,1.0
+all,Total Resolution Time(Class),BFT -> Factor,0.015,1.0
+all,Comments,BFT -> Factor,0.0769,1.0
+all,Discussion Days,BFT -> Factor,0.0196,0.98
+all,Num Duplicates,Factor -> BFT,0.484,0.98
+all,Discussion Days(Class),Factor -> BFT,3.7434,0.97
+all,Reporter Reputations,Factor -> BFT,-5.7419,0.96
+all,Severity,Factor -> BFT,-3.6852,0.75
+all,Developer Workloads,BFT -> Factor,1.5159,0.49
+1,Discussion Days(Class),BFT -> Factor,-0.0657,1.0
+1,Number of Attachment,BFT -> Factor,0.1098,1.0
+1,Comments,BFT -> Factor,5.0707,1.0
+1,Total Resolution Time(Class),BFT -> Factor,0.1168,1.0
+1,Assigned Days(Class),BFT -> Factor,-0.063,1.0
+1,Position,BFT -> Factor,0.0265,0.78
+1,Num Blocks,Factor -> BFT,0.0221,0.26
+1,Reporter Reputations,Factor -> BFT,0.0194,0.14
+1,Discussion Days,BFT -> Factor,-10.8485,0.14
+2,Total Resolution Time(Class),BFT -> Factor,0.0565,1.0
+2,Assigned Days(Class),BFT -> Factor,0.0341,1.0
+2,Comments,BFT -> Factor,0.5781,0.99
+2,Number of Attachment,BFT -> Factor,0.0669,0.99
+2,Num Depends,Factor -> BFT,0.1542,0.6
+2,Reporter Reputations,Factor -> BFT,-0.0153,0.34
+2,Discussion Days,BFT -> Factor,-1.1869,0.03
+3,Discussion Days,BFT -> Factor,-0.7576,1.0
+3,Total Resolution Time,Factor -> BFT,0.0537,1.0
+3,Assigned Days,Factor -> BFT,0.0296,1.0
+3,Severity,Factor -> BFT,-0.2372,1.0
+3,Assigned Days(Class),BFT -> Factor,0.0159,1.0
+3,Priority,Factor -> BFT,0.0102,0.99
+3,Num Blocks,Factor -> BFT,0.1333,0.99
+3,Num Depends,Factor -> BFT,0.0911,0.91
+3,Reporter Reputations,Factor -> BFT,0.0534,0.74
+3,Number of Attachment,BFT -> Factor,0.024,0.59
+3,Comments,BFT -> Factor,0.036,0.2
+4,Total Resolution Time,Factor -> BFT,0.7109,1.0
+4,Assigned Days,Factor -> BFT,0.2178,1.0
+4,Priority,Factor -> BFT,-0.5097,1.0
+4,Discussion Days,BFT -> Factor,-0.7384,1.0
+4,Discussion Days(Class),BFT -> Factor,-0.0221,1.0
+4,Severity,Factor -> BFT,-6.0423,1.0
+4,Num Blocks,Factor -> BFT,0.7508,0.96
+4,Num Duplicates,Factor -> BFT,0.7278,0.84
+4,Comments,BFT -> Factor,-0.0647,0.8
+4,Reporter Reputations,Factor -> BFT,-3.2473,0.79
+4,Num Depends,Factor -> BFT,1.1165,0.58

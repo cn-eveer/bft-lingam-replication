@@ -1,0 +1,54 @@
+Class,Factor,Direction,Effect,Probability
+all,Total Resolution Time,BFT -> Factor,0.9743,1.0
+all,Num Duplicates,Factor -> BFT,0.955,1.0
+all,Discussion Days(Class),Factor -> BFT,8.099,0.9
+all,Reporter Reputations,Factor -> BFT,-12.4116,0.85
+all,Comments,BFT -> Factor,0.0362,0.73
+all,Assigned Days,Factor -> BFT,0.3407,0.71
+all,Assigned Days(Class),Factor -> BFT,8.0199,0.68
+all,Num Developer Prev. Works,Factor -> BFT,-0.0915,0.61
+all,Discussion Days,BFT -> Factor,-0.0542,0.57
+1,Number of Attachment,BFT -> Factor,0.3275,1.0
+1,Comments,BFT -> Factor,5.2203,1.0
+1,Total Resolution Time(Class),BFT -> Factor,0.1451,1.0
+1,Assigned Days(Class),BFT -> Factor,0.0123,1.0
+1,Priority,Factor -> BFT,0.0151,0.79
+1,Severity,Factor -> BFT,-0.0134,0.55
+1,Position,BFT -> Factor,0.0247,0.39
+1,Num Depends,Factor -> BFT,-0.0194,0.14
+1,Discussion Days,BFT -> Factor,-4.6029,0.05
+1,Reporter Reputations,Factor -> BFT,-0.0375,0.03
+2,Discussion Days(Class),BFT -> Factor,-0.0166,1.0
+2,Discussion Days,BFT -> Factor,-1.6952,1.0
+2,Assigned Days(Class),BFT -> Factor,0.0396,1.0
+2,Total Resolution Time(Class),BFT -> Factor,0.0439,1.0
+2,Comments,BFT -> Factor,0.1071,0.87
+2,Position,BFT -> Factor,0.0234,0.3
+2,Num Blocks,Factor -> BFT,0.0385,0.27
+2,Num Duplicates,Factor -> BFT,0.1063,0.27
+2,Num Depends,Factor -> BFT,0.0313,0.11
+2,Reporter Reputations,Factor -> BFT,0.4194,0.09
+3,Discussion Days,BFT -> Factor,-0.975,1.0
+3,Total Resolution Time(Class),BFT -> Factor,0.0106,1.0
+3,Total Resolution Time,Factor -> BFT,0.0399,1.0
+3,Assigned Days(Class),BFT -> Factor,0.0174,1.0
+3,Severity,Factor -> BFT,-0.3395,0.99
+3,Priority,Factor -> BFT,-0.15,0.94
+3,Number of Attachment,BFT -> Factor,0.0216,0.82
+3,Num Blocks,Factor -> BFT,0.0303,0.8
+3,Reporter Reputations,Factor -> BFT,-1.8941,0.78
+3,Comments,BFT -> Factor,0.0625,0.71
+3,Num Depends,Factor -> BFT,0.1928,0.62
+3,Num Duplicates,Factor -> BFT,0.0821,0.24
+4,Discussion Days,BFT -> Factor,-0.8657,1.0
+4,Total Resolution Time,Factor -> BFT,0.7902,1.0
+4,Assigned Days,Factor -> BFT,0.2432,1.0
+4,Discussion Days(Class),BFT -> Factor,-0.0117,1.0
+4,Severity,Factor -> BFT,-17.384,0.99
+4,Priority,Factor -> BFT,-16.7195,0.97
+4,Num Blocks,Factor -> BFT,1.1644,0.61
+4,Num Duplicates,Factor -> BFT,2.6384,0.56
+4,Reporter Reputations,Factor -> BFT,-8.5999,0.47
+4,Num Developer Prev. Works,Factor -> BFT,-0.2612,0.43
+4,Comments,BFT -> Factor,-0.0278,0.33
+4,Num Depends,Factor -> BFT,-0.2026,0.19
