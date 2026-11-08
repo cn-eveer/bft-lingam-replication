@@ -108,6 +108,24 @@ def check_table1(section: Path) -> None:
         compare("Table I", f"{group} {r[1]} total", r[6], float(h["Total"]), "output/tables")
 
 
+def check_data_counts(section: Path) -> None:
+    """Report counts quoted in the Data section text (Fig. 2 numbers and the filter funnel)."""
+    text = _strip_comments((section / "data.tex").read_text())
+    fig = pd.read_csv(HELD / "figure_2_data_overview.csv")
+    funnel = pd.read_csv(HELD / "01_data_collection.csv")
+    funnel = funnel[~funnel["Stage"].str.startswith("sha256")]
+    items = [(f"{r.Scope} {r.Project} extracted", int(r.Extracted)) for r in fig.itertuples()
+             if r.Scope != "All" or r.Project == "Total"]
+    items += [(f"{r.Scope} {r.Project} FIXED", int(r.FIXED)) for r in fig.itertuples()
+              if r.Project == "Total"]
+    items += [(f"{r.Scope} after {r.Stage}", int(r.Reports)) for r in funnel.itertuples()]
+    for item, n in items:
+        printed = f"{n:,}"
+        found = re.search(r"(?<![\d,])" + re.escape(printed) + r"(?!\d|,\d)", text) is not None
+        RESULTS.append({"Table": "Data section counts", "Item": item, "Paper": printed if found else "(not printed)",
+                        "Computed": n, "Source": "output/tables", "Match": found})
+
+
 def check_heatmaps() -> None:
     for d, fig in [("core", "figure_5_causal_strength_core"), ("product", "figure_6_causal_strength_product")]:
         paper = pd.read_csv(HERE / "data" / "paper_result" / f"heatmap_{d}.csv").set_index("Factor")
@@ -232,6 +250,7 @@ def main() -> None:
     if not (HELD / "table_VIII_threshold_sensitivity.csv").exists():
         raise SystemExit("Run `python analyze.py` first.")
     check_table1(args.section)
+    check_data_counts(args.section)
     check_heatmaps()
     check_table3(args.section)
     check_performance(args.section)

@@ -62,6 +62,28 @@ Table I,Total  class 3 %,24.70,24.7,output/tables,True
 Table I,Total  class 4 count,"2,999",2999.0,output/tables,True
 Table I,Total  class 4 %,22.99,22.99,output/tables,True
 Table I,Total  total,"13,046",13046.0,output/tables,True
+Data section counts,Core Core extracted,"83,175",83175,output/tables,True
+Data section counts,Core Total extracted,"83,175",83175,output/tables,True
+Data section counts,Product Fenix extracted,62,62,output/tables,True
+Data section counts,Product Firefox extracted,"41,292",41292,output/tables,True
+Data section counts,Product Firefox for iOS extracted,380,380,output/tables,True
+Data section counts,Product SeaMonkey extracted,"31,636",31636,output/tables,True
+Data section counts,Product Thunderbird extracted,"14,798",14798,output/tables,True
+Data section counts,Product Total extracted,"88,168",88168,output/tables,True
+Data section counts,All Total extracted,"171,343",171343,output/tables,True
+Data section counts,Core Total FIXED,"37,176",37176,output/tables,True
+Data section counts,Product Total FIXED,"13,084",13084,output/tables,True
+Data section counts,All Total FIXED,"50,260",50260,output/tables,True
+Data section counts,Core after summary.csv (all reports),"83,175",83175,output/tables,True
+Data section counts,Core after IQR filter on working_time,"68,620",68620,output/tables,True
+Data section counts,Core after severity/priority changed,"18,806",18806,output/tables,True
+Data section counts,Core after resolution FIXED,"11,489",11489,output/tables,True
+Data section counts,"Core after not self-reported, not newcomer developer","9,590",9590,output/tables,True
+Data section counts,Product after summary.csv (all reports),"88,168",88168,output/tables,True
+Data section counts,Product after IQR filter on working_time,"76,501",76501,output/tables,True
+Data section counts,Product after severity/priority changed,"15,920",15920,output/tables,True
+Data section counts,Product after resolution FIXED,"4,640",4640,output/tables,True
+Data section counts,"Product after not self-reported, not newcomer developer","3,456",3456,output/tables,True
 Figure 5 (Core),Assigned Days All,0.38,0.3786,output/tables,True
 Figure 5 (Core),Assigned Days Class 3,0.03,0.0296,output/tables,True
 Figure 5 (Core),Assigned Days Class 4,0.22,0.2178,output/tables,True

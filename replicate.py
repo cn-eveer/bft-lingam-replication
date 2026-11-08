@@ -287,7 +287,26 @@ def step_01_data_collection(tables: Path) -> pd.DataFrame:
             rows.append({"Scope": SCOPE[data_type], "Stage": stage, "Reports": n})
         rows.append({"Scope": SCOPE[data_type], "Stage": f"sha256 {path.relative_to(PACKAGE_DIR)}",
                      "Reports": sha256(path)[:16]})
-    return write_table(pd.DataFrame(rows), tables, "01_data_collection")
+    write_table(pd.DataFrame(rows), tables, "01_data_collection")
+    step_01_figure2(tables)
+    return pd.DataFrame(rows)
+
+
+def step_01_figure2(tables: Path) -> pd.DataFrame:
+    """Counts of Fig. 2 and the Data section: extracted reports per project and the
+    reports left after the FIXED filter alone (before the analysis filters)."""
+    rows = []
+    for data_type in DATA_TYPES:
+        raw = load_raw(data_type)
+        for project, g in raw.groupby("product"):
+            rows.append({"Scope": SCOPE[data_type], "Project": project, "Extracted": len(g),
+                         "FIXED": int((g["resolution"] == "FIXED").sum())})
+        rows.append({"Scope": SCOPE[data_type], "Project": "Total", "Extracted": len(raw),
+                     "FIXED": int((raw["resolution"] == "FIXED").sum())})
+    tot = pd.DataFrame([r for r in rows if r["Project"] == "Total"])
+    rows.append({"Scope": "All", "Project": "Total", "Extracted": int(tot["Extracted"].sum()),
+                 "FIXED": int(tot["FIXED"].sum())})
+    return write_table(pd.DataFrame(rows), tables, "figure_2_data_overview")
 
 
 def step_02_table1(tables: Path) -> pd.DataFrame:

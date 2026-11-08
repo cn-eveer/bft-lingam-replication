@@ -20,10 +20,10 @@ Bugzilla collection is not re-run.
 ## Install
 
 ```bash
-pip install pandas numpy matplotlib seaborn scikit-learn networkx pgmpy bnlearn "lingam==1.12.2" jupyter
+pip install pandas numpy matplotlib seaborn scikit-learn networkx "pgmpy==0.1.25" "bnlearn==0.10.2" "lingam==1.12.2" jupyter
 ```
 
-`lingam` 1.12 needs scikit-learn ≥ 1.6. Tested with Python 3.11 (pandas 2.1 and 3.0).
+`lingam` 1.12 needs scikit-learn ≥ 1.6. pgmpy and bnlearn must be pinned: bnlearn ≥ 1.0 changed `bnlearn.load`, and step 08 then fails (steps 01-07 and 09 give identical tables with pgmpy 1.1 / bnlearn 1.1). Tested with Python 3.11, numpy 2.4, pandas 2.1, 3.0 and 3.1.
 
 ## Run
 
@@ -44,7 +44,7 @@ Outputs go to `output/tables/` (CSV + Markdown) and `output/figures/`.
 
 | Step | Manuscript artifact | How it is computed |
 |---|---|---|
-| 01 | Data funnel | Row counts after each filter and input SHA-256 (`01_data_collection.csv`) |
+| 01 | Fig. 2, Data section | Row counts after each filter and input SHA-256 (`01_data_collection.csv`); extracted and FIXED reports per project (`figure_2_data_overview.csv`: 171,343 extracted, 50,260 FIXED) |
 | 02 | Table I | BFT class counts of the analysis subset (`lingam_s.process(filter=True)` + `check_train`: IQR on total resolution time, severity/priority changed, FIXED, not self-reported, not newcomer) |
 | 03 | Figs. 5, 6 | Signed LiNGAM total effect of each factor on BFT, for all reports and each class (`lingam_s.evaluate_tce`), from `data/lingam/` or a fresh bootstrap |
 | 04 | Table III | Rule applied to the Figure 5/6 values: S \|v\|>5, M 1-5, W <1, N none; Product/Core when they differ |
@@ -84,11 +84,12 @@ LiNGAM-BN is highest only when the test reports are part of its training data. (
 
 ## Reproducibility status
 
-`python check_manuscript.py --section <path to the manuscript's section/ folder>` (run automatically by `analyze.py` when that folder is next to this package; the manuscript source is not part of this repository) reads every value printed in the manuscript's tables directly from the LaTeX source. It checks each against the computed value, to the precision the paper prints. Details are written to `output/manuscript_check.csv`.
+`python check_manuscript.py --section <path to the manuscript's section/ folder>` (run automatically by `analyze.py` when that folder is next to this package; the manuscript source is not part of this repository) reads every value printed in the manuscript's tables, and the report counts quoted in the Data section, directly from the LaTeX source. It checks each against the computed value, to the precision the paper prints. Details are written to `output/manuscript_check.csv`.
 
 | Manuscript table | Package output |
 |---|---|
 | Table I: BFT distribution | `table_I_*` |
+| Data section counts (Fig. 2, filter funnel) | `figure_2_data_overview`, `01_data_collection` |
 | Fig. 5, 6: causal-strength heatmaps | `figure_5/6_*` |
 | Table III: strength and direction | `table_III_*` |
 | Table IV: P / R / F1 (Product + Core) | `table_IV_*` |
