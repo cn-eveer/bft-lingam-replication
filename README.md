@@ -12,8 +12,8 @@ This package computes every data-derived table and figure of the paper from the 
 | `data/models/{core,product}/bn_model_wtf*_hc_bdeu_none.pkl` | Saved bnlearn BN structures used by the paper protocol, because hill-climbing is not exactly deterministic: the original models from `exec/bn_t.py` (Feb/May 2025), except the Core 2-class BN, whose original file had been overwritten and which was re-learned once with the same procedure |
 | `data/lingam_train/lingam_tce_train_{core,product}_{iqr,no_iqr}.csv` | DirectLiNGAM bootstrap (100 samples) learned on the **training split only**, with BFT as the continuous fixing time; the LiNGAM-BN structure of the prediction steps 05-07 (`iqr`: outliers removed as in the paper, `no_iqr`: sensitivity analysis) |
 | `data/lingam_refined/*.csv` | Direct-edge DirectLiNGAM bootstraps (100 samples) without total resolution time and with temporal prior knowledge, the structure of the refined LiNGAM-BN: `train_*` (training splits), `all_*` and `temporal_*` (transfer training sets); `grid/` holds the extra variants scored by `refine_lingam_bn.py` |
-| `data/bn_structures/*.csv` | Hill-climbing structures of the standard BN in steps 05-07 (one per scope, task and outlier setting), learned once and reused: pgmpy breaks score ties in an order that depends on the Python process, so re-learning can give slightly different structures. `--relearn-bn` learns them again |
-| `data/paper_result/heatmap_{core,product}.csv` | Values plotted in the manuscript's Figures 5-6 (Core "Assigned Days(Class)" class 1 corrected to −0.063 on 2026-10-01); used only for the comparison step |
+| `data/bn_structures/*.csv` | Hill-climbing structures of the standard BN in steps 05-07 (one per scope, task and outlier setting), learned once and reused: pgmpy breaks score ties in an order that depends on the Python process, so re-learning can give slightly different structures. `--relearn-bn` learns them again. Files ending in `_with_workloads` belong to `--include-workloads` |
+| `data/paper_result/heatmap_{core,product}.csv` | Values plotted in the manuscript's Figures 5-6 (Core "Assigned Days(Class)" class 1 corrected to −0.063 on 2026-10-01); used only for the comparison step; the rows "Num Developer Prev. Works" and "Number of Attachment" were relabelled "Num Reporter Prev. Fixed" and "Number of Attachments" on 2026-11-09 to match what the variables measure |
 
 Bugzilla collection is not re-run.
 
@@ -34,6 +34,7 @@ python analyze.py                      # all tables and figures (~4 min)
 python analyze.py --retrain-lingam     # also re-run every LiNGAM bootstrap from data/raw (~70 min)
 python analyze.py --relearn-bn         # also re-learn the standard BN structures
 python analyze.py --include-working-time   # sensitivity run, see "Predictors" below
+python analyze.py --include-workloads      # earlier setting with the two workload variables, see "Predictors"
 ```
 
 Or open `01_data_collection.ipynb` and `02_analysis.ipynb`. `python generate_data.py` writes the preprocessed analysis datasets to `output/analysis_data/`.
@@ -60,6 +61,10 @@ Every model in steps 05-07 is trained on the training split only (including the 
 ## Predictors
 
 `working_time` (total resolution time, creation to resolution) always contains `fixing_time`, so using it to predict the BFT class leaks the target. It is excluded from the prediction models. `--include-working-time` reproduces the leaky setting for comparison; the LiNGAM causal analysis (steps 03-04) uses all original columns in both cases.
+
+`system_workloads` and `developer_workloads` in `data/raw` were meant to count the reports created (or assigned to the same developer) around a report's creation. The extraction code compared `creation_time >= start - 2 days` and `creation_time >= start + 2 days`, so they count all (the developer's) reports created at least two days *later*: `system_workloads` has a correlation of -1.0 with the creation order, and `developer_workloads` depends on the developer's future activity. Both are excluded from the prediction models (steps 05-07, 09 and `refine_lingam_bn.py`). `--include-workloads` reproduces the earlier setting, in which RF's four-class macro-F1 is 0.538 (Core) and 0.521 (Product) instead of 0.511 and 0.514. The causal analysis keeps them; the manuscript does not interpret them.
+
+`num_creator_previous_works` is the number of the reporter's earlier reports resolved as FIXED, and `reporter_reputations` the share of the reporter's earlier reports resolved as FIXED.
 
 ## Original protocol (step 08)
 
@@ -90,7 +95,7 @@ LiNGAM-BN is highest only when the test reports are part of its training data. (
 |---|---|
 | Table I: BFT distribution | `table_I_*` |
 | Data section counts (Fig. 2, filter funnel) | `figure_2_data_overview`, `01_data_collection` |
-| Fig. 5, 6: causal-strength heatmaps | `figure_5/6_*` |
+| Fig. 5, 6: causal-strength heatmaps (the manuscript uses `output/figures/figure_5/6_*.png`) | `figure_5/6_*` |
 | Table III: strength and direction | `table_III_*` |
 | Table IV: P / R / F1 (Product + Core) | `table_IV_*` |
 | Table V: macro-F1 | `table_V_*` |

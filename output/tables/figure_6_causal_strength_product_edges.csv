@@ -6,9 +6,9 @@ all,Reporter Reputations,Factor -> BFT,-12.4116,0.85
 all,Comments,BFT -> Factor,0.0362,0.73
 all,Assigned Days,Factor -> BFT,0.3407,0.71
 all,Assigned Days(Class),Factor -> BFT,8.0199,0.68
-all,Num Developer Prev. Works,Factor -> BFT,-0.0915,0.61
+all,Num Reporter Prev. Fixed,Factor -> BFT,-0.0915,0.61
 all,Discussion Days,BFT -> Factor,-0.0542,0.57
-1,Number of Attachment,BFT -> Factor,0.3275,1.0
+1,Number of Attachments,BFT -> Factor,0.3275,1.0
 1,Comments,BFT -> Factor,5.2203,1.0
 1,Total Resolution Time(Class),BFT -> Factor,0.1451,1.0
 1,Assigned Days(Class),BFT -> Factor,0.0123,1.0
@@ -34,7 +34,7 @@ all,Discussion Days,BFT -> Factor,-0.0542,0.57
 3,Assigned Days(Class),BFT -> Factor,0.0174,1.0
 3,Severity,Factor -> BFT,-0.3395,0.99
 3,Priority,Factor -> BFT,-0.15,0.94
-3,Number of Attachment,BFT -> Factor,0.0216,0.82
+3,Number of Attachments,BFT -> Factor,0.0216,0.82
 3,Num Blocks,Factor -> BFT,0.0303,0.8
 3,Reporter Reputations,Factor -> BFT,-1.8941,0.78
 3,Comments,BFT -> Factor,0.0625,0.71
@@ -49,6 +49,6 @@ all,Discussion Days,BFT -> Factor,-0.0542,0.57
 4,Num Blocks,Factor -> BFT,1.1644,0.61
 4,Num Duplicates,Factor -> BFT,2.6384,0.56
 4,Reporter Reputations,Factor -> BFT,-8.5999,0.47
-4,Num Developer Prev. Works,Factor -> BFT,-0.2612,0.43
+4,Num Reporter Prev. Fixed,Factor -> BFT,-0.2612,0.43
 4,Comments,BFT -> Factor,-0.0278,0.33
 4,Num Depends,Factor -> BFT,-0.2026,0.19

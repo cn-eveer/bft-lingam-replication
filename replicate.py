@@ -114,6 +114,16 @@ PREDICTORS = [
 ]
 LEAKY = {"working_time", "working_time_class", "fixing_time", "fixing_time_class"}
 
+# system_workloads and developer_workloads in data/raw were meant as the number of reports
+# created (or assigned to the same developer) around the report's creation, but the
+# extraction code compared `creation_time >= start - 2 days` and `creation_time >= start + 2
+# days`, so they count all (the developer's) reports created at least two days *later*:
+# system_workloads is a reversed creation-time index (correlation -1.0 with creation time)
+# and developer_workloads depends on the developer's future activity. They are therefore
+# excluded from the prediction models; `--include-workloads` reproduces the earlier setting.
+WORKLOAD_VARIABLES = ("system_workloads", "developer_workloads")
+EXCLUDE_WORKLOADS = True
+
 # Row labels used in the paper's Figures 5/6 (data/paper_result/heatmap_*.csv)
 FACTOR_LABELS = {
     "assigned_days": "Assigned Days",
@@ -124,10 +134,10 @@ FACTOR_LABELS = {
     "discussion_days_class": "Discussion Days(Class)",
     "fixing_time_class": "BFT(Class)",
     "num_blocks": "Num Blocks",
-    "num_creator_previous_works": "Num Developer Prev. Works",
+    "num_creator_previous_works": "Num Reporter Prev. Fixed",
     "num_depends": "Num Depends",
     "num_duplicates": "Num Duplicates",
-    "number_of_attachments": "Number of Attachment",
+    "number_of_attachments": "Number of Attachments",
     "position": "Position",
     "priority": "Priority",
     "reporter_reputations": "Reporter Reputations",
@@ -541,8 +551,8 @@ def step_03_heatmaps(tables: Path, figures: Path, lingam_dir: Path = STORED_LING
         write_table(edges.round({"Effect": 4, "Probability": 2}), tables, f"{fig}_edges")
         fig_, ax = plt.subplots(figsize=(8, 6))
         sns.heatmap(mat, annot=True, fmt=".2g", cmap="coolwarm", center=0, ax=ax)
-        ax.set_title(f"Causal Effect of Factors on BFT ({data_type})")
-        ax.set_xlabel("Classes")
+        ax.set_title(f"Causal Strength of Factors on BFT ({SCOPE[data_type]} bugs)")
+        ax.set_xlabel("BFT Class")
         ax.set_ylabel("Factors")
         fig_.tight_layout()
         fig_.savefig(figures / f"{fig}.png", dpi=100)
@@ -745,7 +755,8 @@ def lingam_features(tce: pd.DataFrame, features: list[str]) -> list[str]:
 # 05 RQ3: 4-class prediction
 # ---------------------------------------------------------------------------
 def predictors() -> list[str]:
-    return [f for f in PREDICTORS if not (EXCLUDE_WORKING_TIME and f == "working_time")]
+    return [f for f in PREDICTORS if not (EXCLUDE_WORKING_TIME and f == "working_time")
+            and not (EXCLUDE_WORKLOADS and f in WORKLOAD_VARIABLES)]
 
 
 def split(df: pd.DataFrame):
@@ -783,7 +794,8 @@ def fit_predict(train: pd.DataFrame, test: pd.DataFrame, tce: pd.DataFrame, mode
             preds[m] = LogisticRegression(max_iter=1000, random_state=RANDOM_SEED) \
                 .fit(Xs_tr[cols], y_tr).predict(Xs_te[cols])
         elif m == "BN":
-            key = structure_key and structure_key + ("" if EXCLUDE_WORKING_TIME else "_with_working_time")
+            key = structure_key and structure_key + ("" if EXCLUDE_WORKING_TIME else "_with_working_time") \
+                + ("" if EXCLUDE_WORKLOADS else "_with_workloads")
             preds[m] = bn_predict(learn_structure(d_tr[bn_nodes + [BN_TARGET]], key))
         elif m in REFINED_MODELS:
             preds[m] = bn_predict(refined_edges(refined_tab, bn_nodes + [BN_TARGET]), REFINED_ESS)
@@ -1241,8 +1253,11 @@ def set_include_working_time(include: bool) -> None:
 
 
 def run_all(output: Path = DEFAULT_OUTPUT, retrain: bool = False, n_sampling: int = N_BOOTSTRAP,
-            include_working_time: bool = False, original_protocol: bool = True) -> pd.DataFrame:
+            include_working_time: bool = False, original_protocol: bool = True,
+            include_workloads: bool = False) -> pd.DataFrame:
+    global EXCLUDE_WORKLOADS
     set_include_working_time(include_working_time)
+    EXCLUDE_WORKLOADS = not include_workloads
     tables, figures = ensure_dirs(output)
     lingam_dir = retrain_lingam(Path(output) / "lingam", n_sampling) if retrain else STORED_LINGAM_DIR
     print(f"[lingam] causal analysis (steps 03-04) uses {lingam_dir}")

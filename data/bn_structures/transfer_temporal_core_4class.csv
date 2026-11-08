@@ -19,7 +19,6 @@ num_creator_previous_works,reporter_reputations
 num_depends,num_blocks
 num_depends,position
 number_of_attachments,comment_count
-number_of_attachments,developer_workloads
 number_of_attachments,num_creator_previous_works
 position,comment_count
 position,num_blocks

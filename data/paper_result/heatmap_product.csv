@@ -5,10 +5,10 @@ Comments,0.036,5.2,0.11,0.062,-0.028
 Discussion Days,-0.054,-4.6,-1.7,-0.97,-0.87
 Discussion Days(Class),8.1,,-0.017,,-0.012
 Num Blocks,,,0.038,0.03,1.2
-Num Developer Prev. Works,-0.091,,,,-0.26
+Num Reporter Prev. Fixed,-0.091,,,,-0.26
 Num Depends,,-0.019,0.031,0.19,-0.2
 Num Duplicates,0.95,,0.11,0.082,2.6
-Number of Attachment,,0.33,,0.022,
+Number of Attachments,,0.33,,0.022,
 Position,,0.025,0.023,,
 Priority,,0.015,,-0.15,-17.0
 Reporter Reputations,-12.0,-0.037,0.42,-1.9,-8.6

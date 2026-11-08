@@ -6,14 +6,12 @@ assigned_days_class,discussion_days_class
 bft_class,comment_count
 bft_class,discussion_days_class
 bft_class,priority
-bft_class,system_workloads
 comment_count,num_duplicates
 comment_count,severity
 discussion_days_class,discussion_days
 discussion_days_class,priority
 num_blocks,number_of_attachments
 num_blocks,severity
-num_creator_previous_works,developer_workloads
 num_creator_previous_works,reporter_reputations
 num_depends,assigned_days_class
 num_depends,bft_class
@@ -22,7 +20,6 @@ num_depends,number_of_attachments
 num_depends,position
 number_of_attachments,assigned_days
 number_of_attachments,comment_count
-number_of_attachments,developer_workloads
 number_of_attachments,num_creator_previous_works
 position,comment_count
 position,num_blocks
@@ -31,5 +28,3 @@ priority,reporter_reputations
 priority,severity
 severity,num_creator_previous_works
 severity,num_duplicates
-severity,system_workloads
-system_workloads,discussion_days

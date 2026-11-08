@@ -12,7 +12,7 @@
 | all   | Severity                     | Factor -> BFT | -3.6852  | 0.75        |
 | all   | Developer Workloads          | BFT -> Factor | 1.5159   | 0.49        |
 | 1     | Discussion Days(Class)       | BFT -> Factor | -0.0657  | 1.0         |
-| 1     | Number of Attachment         | BFT -> Factor | 0.1098   | 1.0         |
+| 1     | Number of Attachments        | BFT -> Factor | 0.1098   | 1.0         |
 | 1     | Comments                     | BFT -> Factor | 5.0707   | 1.0         |
 | 1     | Total Resolution Time(Class) | BFT -> Factor | 0.1168   | 1.0         |
 | 1     | Assigned Days(Class)         | BFT -> Factor | -0.063   | 1.0         |
@@ -23,7 +23,7 @@
 | 2     | Total Resolution Time(Class) | BFT -> Factor | 0.0565   | 1.0         |
 | 2     | Assigned Days(Class)         | BFT -> Factor | 0.0341   | 1.0         |
 | 2     | Comments                     | BFT -> Factor | 0.5781   | 0.99        |
-| 2     | Number of Attachment         | BFT -> Factor | 0.0669   | 0.99        |
+| 2     | Number of Attachments        | BFT -> Factor | 0.0669   | 0.99        |
 | 2     | Num Depends                  | Factor -> BFT | 0.1542   | 0.6         |
 | 2     | Reporter Reputations         | Factor -> BFT | -0.0153  | 0.34        |
 | 2     | Discussion Days              | BFT -> Factor | -1.1869  | 0.03        |
@@ -36,7 +36,7 @@
 | 3     | Num Blocks                   | Factor -> BFT | 0.1333   | 0.99        |
 | 3     | Num Depends                  | Factor -> BFT | 0.0911   | 0.91        |
 | 3     | Reporter Reputations         | Factor -> BFT | 0.0534   | 0.74        |
-| 3     | Number of Attachment         | BFT -> Factor | 0.024    | 0.59        |
+| 3     | Number of Attachments        | BFT -> Factor | 0.024    | 0.59        |
 | 3     | Comments                     | BFT -> Factor | 0.036    | 0.2         |
 | 4     | Total Resolution Time        | Factor -> BFT | 0.7109   | 1.0         |
 | 4     | Assigned Days                | Factor -> BFT | 0.2178   | 1.0         |

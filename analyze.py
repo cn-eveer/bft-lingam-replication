@@ -12,11 +12,12 @@ if __name__ == "__main__":
     ap.add_argument("--retrain-lingam", action="store_true")
     ap.add_argument("--n-sampling", type=int, default=replicate.N_BOOTSTRAP)
     ap.add_argument("--include-working-time", action="store_true")
+    ap.add_argument("--include-workloads", action="store_true")
     ap.add_argument("--relearn-bn", action="store_true")
     args = ap.parse_args()
     replicate.RELEARN_BN = args.relearn_bn
     summary = replicate.run_all(replicate.DEFAULT_OUTPUT, args.retrain_lingam, args.n_sampling,
-                                args.include_working_time)
+                                args.include_working_time, include_workloads=args.include_workloads)
     print(summary.to_string(index=False))
 
     # Compare with the tables printed in the manuscript when its LaTeX source is next to this package

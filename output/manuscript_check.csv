@@ -26,15 +26,15 @@ Table I,Product SeaMonkey class 3 %,22.20,22.2,output/tables,True
 Table I,Product SeaMonkey class 4 count,467,467.0,output/tables,True
 Table I,Product SeaMonkey class 4 %,25.11,25.11,output/tables,True
 Table I,Product SeaMonkey total,"1,860",1860.0,output/tables,True
-Table I,Product ThunderBird class 1 count,113,113.0,output/tables,True
-Table I,Product ThunderBird class 1 %,27.10,27.1,output/tables,True
-Table I,Product ThunderBird class 2 count,105,105.0,output/tables,True
-Table I,Product ThunderBird class 2 %,25.18,25.18,output/tables,True
-Table I,Product ThunderBird class 3 count,75,75.0,output/tables,True
-Table I,Product ThunderBird class 3 %,17.99,17.99,output/tables,True
-Table I,Product ThunderBird class 4 count,124,124.0,output/tables,True
-Table I,Product ThunderBird class 4 %,29.74,29.74,output/tables,True
-Table I,Product ThunderBird total,417,417.0,output/tables,True
+Table I,Product Thunderbird class 1 count,113,113.0,output/tables,True
+Table I,Product Thunderbird class 1 %,27.10,27.1,output/tables,True
+Table I,Product Thunderbird class 2 count,105,105.0,output/tables,True
+Table I,Product Thunderbird class 2 %,25.18,25.18,output/tables,True
+Table I,Product Thunderbird class 3 count,75,75.0,output/tables,True
+Table I,Product Thunderbird class 3 %,17.99,17.99,output/tables,True
+Table I,Product Thunderbird class 4 count,124,124.0,output/tables,True
+Table I,Product Thunderbird class 4 %,29.74,29.74,output/tables,True
+Table I,Product Thunderbird total,417,417.0,output/tables,True
 Table I,Product Total class 1 count,975,975.0,output/tables,True
 Table I,Product Total class 1 %,28.21,28.21,output/tables,True
 Table I,Product Total class 2 count,840,840.0,output/tables,True
@@ -113,9 +113,9 @@ Figure 5 (Core),Num Depends Class 3,0.091,0.0911,output/tables,True
 Figure 5 (Core),Num Depends Class 4,1.1,1.1165,output/tables,True
 Figure 5 (Core),Num Duplicates All,0.48,0.484,output/tables,True
 Figure 5 (Core),Num Duplicates Class 4,0.73,0.7278,output/tables,True
-Figure 5 (Core),Number of Attachment Class 1,0.11,0.1098,output/tables,True
-Figure 5 (Core),Number of Attachment Class 2,0.067,0.0669,output/tables,True
-Figure 5 (Core),Number of Attachment Class 3,0.024,0.024,output/tables,True
+Figure 5 (Core),Number of Attachments Class 1,0.11,0.1098,output/tables,True
+Figure 5 (Core),Number of Attachments Class 2,0.067,0.0669,output/tables,True
+Figure 5 (Core),Number of Attachments Class 3,0.024,0.024,output/tables,True
 Figure 5 (Core),Position Class 1,0.026,0.0265,output/tables,True
 Figure 5 (Core),Priority Class 3,0.01,0.0102,output/tables,True
 Figure 5 (Core),Priority Class 4,-0.51,-0.5097,output/tables,True
@@ -155,8 +155,8 @@ Figure 6 (Product),Discussion Days(Class) Class 4,-0.012,-0.0117,output/tables,T
 Figure 6 (Product),Num Blocks Class 2,0.038,0.0385,output/tables,True
 Figure 6 (Product),Num Blocks Class 3,0.03,0.0303,output/tables,True
 Figure 6 (Product),Num Blocks Class 4,1.2,1.1644,output/tables,True
-Figure 6 (Product),Num Developer Prev. Works All,-0.091,-0.0915,output/tables,True
-Figure 6 (Product),Num Developer Prev. Works Class 4,-0.26,-0.2612,output/tables,True
+Figure 6 (Product),Num Reporter Prev. Fixed All,-0.091,-0.0915,output/tables,True
+Figure 6 (Product),Num Reporter Prev. Fixed Class 4,-0.26,-0.2612,output/tables,True
 Figure 6 (Product),Num Depends Class 1,-0.019,-0.0194,output/tables,True
 Figure 6 (Product),Num Depends Class 2,0.031,0.0313,output/tables,True
 Figure 6 (Product),Num Depends Class 3,0.19,0.1928,output/tables,True
@@ -165,8 +165,8 @@ Figure 6 (Product),Num Duplicates All,0.95,0.955,output/tables,True
 Figure 6 (Product),Num Duplicates Class 2,0.11,0.1063,output/tables,True
 Figure 6 (Product),Num Duplicates Class 3,0.082,0.0821,output/tables,True
 Figure 6 (Product),Num Duplicates Class 4,2.6,2.6384,output/tables,True
-Figure 6 (Product),Number of Attachment Class 1,0.33,0.3275,output/tables,True
-Figure 6 (Product),Number of Attachment Class 3,0.022,0.0216,output/tables,True
+Figure 6 (Product),Number of Attachments Class 1,0.33,0.3275,output/tables,True
+Figure 6 (Product),Number of Attachments Class 3,0.022,0.0216,output/tables,True
 Figure 6 (Product),Position Class 1,0.025,0.0247,output/tables,True
 Figure 6 (Product),Position Class 2,0.023,0.0234,output/tables,True
 Figure 6 (Product),Priority Class 1,0.015,0.0151,output/tables,True
@@ -230,30 +230,30 @@ Table III,Severity class 1,W-/N,W-/N,output/tables,True
 Table III,Severity class 2,N,N,output/tables,True
 Table III,Severity class 3,W-,W-,output/tables,True
 Table III,Severity class 4,S-,S-,output/tables,True
-Table IV (P/R/F1),Product RF Precision class 1,0.74,0.744,output/tables,True
-Table IV (P/R/F1),Product RF Recall class 1,0.63,0.626,output/tables,True
-Table IV (P/R/F1),Product RF F1 class 1,0.68,0.68,output/tables,True
-Table IV (P/R/F1),Product RF Precision class 2,0.42,0.421,output/tables,True
-Table IV (P/R/F1),Product RF Recall class 2,0.46,0.458,output/tables,True
-Table IV (P/R/F1),Product RF F1 class 2,0.44,0.439,output/tables,True
-Table IV (P/R/F1),Product RF Precision class 3,0.36,0.36,output/tables,True
-Table IV (P/R/F1),Product RF Recall class 3,0.33,0.327,output/tables,True
-Table IV (P/R/F1),Product RF F1 class 3,0.34,0.343,output/tables,True
-Table IV (P/R/F1),Product RF Precision class 4,0.58,0.579,output/tables,True
-Table IV (P/R/F1),Product RF Recall class 4,0.68,0.676,output/tables,True
-Table IV (P/R/F1),Product RF F1 class 4,0.62,0.624,output/tables,True
-Table IV (P/R/F1),Product LR Precision class 1,0.49,0.488,output/tables,True
+Table IV (P/R/F1),Product RF Precision class 1,0.68,0.678,output/tables,True
+Table IV (P/R/F1),Product RF Recall class 1,0.61,0.615,output/tables,True
+Table IV (P/R/F1),Product RF F1 class 1,0.65,0.645,output/tables,True
+Table IV (P/R/F1),Product RF Precision class 2,0.41,0.413,output/tables,True
+Table IV (P/R/F1),Product RF Recall class 2,0.45,0.452,output/tables,True
+Table IV (P/R/F1),Product RF F1 class 2,0.43,0.432,output/tables,True
+Table IV (P/R/F1),Product RF Precision class 3,0.38,0.382,output/tables,True
+Table IV (P/R/F1),Product RF Recall class 3,0.35,0.347,output/tables,True
+Table IV (P/R/F1),Product RF F1 class 3,0.36,0.364,output/tables,True
+Table IV (P/R/F1),Product RF Precision class 4,0.59,0.59,output/tables,True
+Table IV (P/R/F1),Product RF Recall class 4,0.64,0.642,output/tables,True
+Table IV (P/R/F1),Product RF F1 class 4,0.61,0.615,output/tables,True
+Table IV (P/R/F1),Product LR Precision class 1,0.48,0.483,output/tables,True
 Table IV (P/R/F1),Product LR Recall class 1,0.71,0.708,output/tables,True
-Table IV (P/R/F1),Product LR F1 class 1,0.58,0.577,output/tables,True
-Table IV (P/R/F1),Product LR Precision class 2,0.36,0.362,output/tables,True
+Table IV (P/R/F1),Product LR F1 class 1,0.57,0.574,output/tables,True
+Table IV (P/R/F1),Product LR Precision class 2,0.35,0.355,output/tables,True
 Table IV (P/R/F1),Product LR Recall class 2,0.30,0.298,output/tables,True
-Table IV (P/R/F1),Product LR F1 class 2,0.33,0.327,output/tables,True
-Table IV (P/R/F1),Product LR Precision class 3,0.18,0.184,output/tables,True
+Table IV (P/R/F1),Product LR F1 class 2,0.32,0.324,output/tables,True
+Table IV (P/R/F1),Product LR Precision class 3,0.19,0.188,output/tables,True
 Table IV (P/R/F1),Product LR Recall class 3,0.06,0.06,output/tables,True
-Table IV (P/R/F1),Product LR F1 class 3,0.09,0.09,output/tables,True
-Table IV (P/R/F1),Product LR Precision class 4,0.49,0.486,output/tables,True
-Table IV (P/R/F1),Product LR Recall class 4,0.60,0.603,output/tables,True
-Table IV (P/R/F1),Product LR F1 class 4,0.54,0.539,output/tables,True
+Table IV (P/R/F1),Product LR F1 class 3,0.09,0.091,output/tables,True
+Table IV (P/R/F1),Product LR Precision class 4,0.48,0.484,output/tables,True
+Table IV (P/R/F1),Product LR Recall class 4,0.59,0.587,output/tables,True
+Table IV (P/R/F1),Product LR F1 class 4,0.53,0.53,output/tables,True
 Table IV (P/R/F1),Product BN Precision class 1,0.48,0.48,output/tables,True
 Table IV (P/R/F1),Product BN Recall class 1,0.74,0.744,output/tables,True
 Table IV (P/R/F1),Product BN F1 class 1,0.58,0.584,output/tables,True
@@ -290,30 +290,30 @@ Table IV (P/R/F1),Product Refined LiNGAM-BN F1 class 3,0.38,0.376,output/tables,
 Table IV (P/R/F1),Product Refined LiNGAM-BN Precision class 4,0.56,0.563,output/tables,True
 Table IV (P/R/F1),Product Refined LiNGAM-BN Recall class 4,0.53,0.525,output/tables,True
 Table IV (P/R/F1),Product Refined LiNGAM-BN F1 class 4,0.54,0.543,output/tables,True
-Table IV (P/R/F1),Core RF Precision class 1,0.65,0.651,output/tables,True
-Table IV (P/R/F1),Core RF Recall class 1,0.61,0.608,output/tables,True
-Table IV (P/R/F1),Core RF F1 class 1,0.63,0.629,output/tables,True
-Table IV (P/R/F1),Core RF Precision class 2,0.43,0.435,output/tables,True
-Table IV (P/R/F1),Core RF Recall class 2,0.52,0.516,output/tables,True
-Table IV (P/R/F1),Core RF F1 class 2,0.47,0.472,output/tables,True
-Table IV (P/R/F1),Core RF Precision class 3,0.45,0.449,output/tables,True
-Table IV (P/R/F1),Core RF Recall class 3,0.44,0.44,output/tables,True
-Table IV (P/R/F1),Core RF F1 class 3,0.44,0.444,output/tables,True
-Table IV (P/R/F1),Core RF Precision class 4,0.65,0.654,output/tables,True
-Table IV (P/R/F1),Core RF Recall class 4,0.56,0.565,output/tables,True
-Table IV (P/R/F1),Core RF F1 class 4,0.61,0.606,output/tables,True
-Table IV (P/R/F1),Core LR Precision class 1,0.44,0.444,output/tables,True
-Table IV (P/R/F1),Core LR Recall class 1,0.65,0.651,output/tables,True
-Table IV (P/R/F1),Core LR F1 class 1,0.53,0.528,output/tables,True
-Table IV (P/R/F1),Core LR Precision class 2,0.40,0.401,output/tables,True
-Table IV (P/R/F1),Core LR Recall class 2,0.46,0.455,output/tables,True
-Table IV (P/R/F1),Core LR F1 class 2,0.43,0.427,output/tables,True
-Table IV (P/R/F1),Core LR Precision class 3,0.37,0.371,output/tables,True
-Table IV (P/R/F1),Core LR Recall class 3,0.26,0.261,output/tables,True
-Table IV (P/R/F1),Core LR F1 class 3,0.31,0.306,output/tables,True
-Table IV (P/R/F1),Core LR Precision class 4,0.60,0.602,output/tables,True
-Table IV (P/R/F1),Core LR Recall class 4,0.39,0.392,output/tables,True
-Table IV (P/R/F1),Core LR F1 class 4,0.47,0.475,output/tables,True
+Table IV (P/R/F1),Core RF Precision class 1,0.63,0.63,output/tables,True
+Table IV (P/R/F1),Core RF Recall class 1,0.60,0.605,output/tables,True
+Table IV (P/R/F1),Core RF F1 class 1,0.62,0.618,output/tables,True
+Table IV (P/R/F1),Core RF Precision class 2,0.41,0.413,output/tables,True
+Table IV (P/R/F1),Core RF Recall class 2,0.47,0.474,output/tables,True
+Table IV (P/R/F1),Core RF F1 class 2,0.44,0.442,output/tables,True
+Table IV (P/R/F1),Core RF Precision class 3,0.41,0.41,output/tables,True
+Table IV (P/R/F1),Core RF Recall class 3,0.41,0.406,output/tables,True
+Table IV (P/R/F1),Core RF F1 class 3,0.41,0.408,output/tables,True
+Table IV (P/R/F1),Core RF Precision class 4,0.62,0.62,output/tables,True
+Table IV (P/R/F1),Core RF Recall class 4,0.54,0.542,output/tables,True
+Table IV (P/R/F1),Core RF F1 class 4,0.58,0.578,output/tables,True
+Table IV (P/R/F1),Core LR Precision class 1,0.45,0.451,output/tables,True
+Table IV (P/R/F1),Core LR Recall class 1,0.69,0.687,output/tables,True
+Table IV (P/R/F1),Core LR F1 class 1,0.54,0.544,output/tables,True
+Table IV (P/R/F1),Core LR Precision class 2,0.36,0.363,output/tables,True
+Table IV (P/R/F1),Core LR Recall class 2,0.40,0.4,output/tables,True
+Table IV (P/R/F1),Core LR F1 class 2,0.38,0.38,output/tables,True
+Table IV (P/R/F1),Core LR Precision class 3,0.34,0.342,output/tables,True
+Table IV (P/R/F1),Core LR Recall class 3,0.24,0.24,output/tables,True
+Table IV (P/R/F1),Core LR F1 class 3,0.28,0.282,output/tables,True
+Table IV (P/R/F1),Core LR Precision class 4,0.61,0.61,output/tables,True
+Table IV (P/R/F1),Core LR Recall class 4,0.38,0.382,output/tables,True
+Table IV (P/R/F1),Core LR F1 class 4,0.47,0.47,output/tables,True
 Table IV (P/R/F1),Core BN Precision class 1,0.43,0.43,output/tables,True
 Table IV (P/R/F1),Core BN Recall class 1,0.68,0.676,output/tables,True
 Table IV (P/R/F1),Core BN F1 class 1,0.53,0.526,output/tables,True
@@ -350,132 +350,132 @@ Table IV (P/R/F1),Core Refined LiNGAM-BN F1 class 3,0.36,0.357,output/tables,Tru
 Table IV (P/R/F1),Core Refined LiNGAM-BN Precision class 4,0.57,0.573,output/tables,True
 Table IV (P/R/F1),Core Refined LiNGAM-BN Recall class 4,0.49,0.487,output/tables,True
 Table IV (P/R/F1),Core Refined LiNGAM-BN F1 class 4,0.53,0.526,output/tables,True
-Table V (macro-F1),Core RF,0.538,0.538,output/tables,True
-Table V (macro-F1),Product RF,0.521,0.521,output/tables,True
-Table V (macro-F1),Core LR,0.434,0.434,output/tables,True
-Table V (macro-F1),Product LR,0.383,0.383,output/tables,True
+Table V (macro-F1),Core RF,0.511,0.511,output/tables,True
+Table V (macro-F1),Product RF,0.514,0.514,output/tables,True
+Table V (macro-F1),Core LR,0.419,0.419,output/tables,True
+Table V (macro-F1),Product LR,0.380,0.38,output/tables,True
 Table V (macro-F1),Core BN,0.444,0.444,output/tables,True
 Table V (macro-F1),Product BN,0.482,0.482,output/tables,True
 Table V (macro-F1),Core LiNGAM-BN,0.348,0.348,output/tables,True
 Table V (macro-F1),Product LiNGAM-BN,0.338,0.338,output/tables,True
 Table V (macro-F1),Core Refined LiNGAM-BN,0.438,0.438,output/tables,True
 Table V (macro-F1),Product Refined LiNGAM-BN,0.462,0.462,output/tables,True
-Table VI (F1),class 1 RF Core F1,0.63,0.629,output/tables,True
-Table VI (F1),class 1 RF Product F1,0.68,0.68,output/tables,True
-Table VI (F1),class 1 LR Core F1,0.53,0.528,output/tables,True
-Table VI (Cliff's d),class 1 LR Core d,-0.68,-0.68,output/tables,True
+Table VI (F1),class 1 RF Core F1,0.62,0.618,output/tables,True
+Table VI (F1),class 1 RF Product F1,0.65,0.645,output/tables,True
+Table VI (F1),class 1 LR Core F1,0.54,0.544,output/tables,True
+Table VI (Cliff's d),class 1 LR Core d,-0.76,-0.76,output/tables,True
 Table VI (p),class 1 LR Core p,0.001,0.001,output/tables,True
-Table VI (F1),class 1 LR Product F1,0.58,0.577,output/tables,True
-Table VI (Cliff's d),class 1 LR Product d,-0.62,-0.62,output/tables,True
-Table VI (p),class 1 LR Product p,0.001,0.001,output/tables,True
+Table VI (F1),class 1 LR Product F1,0.57,0.574,output/tables,True
+Table VI (Cliff's d),class 1 LR Product d,-0.32,-0.32,output/tables,True
+Table VI (p),class 1 LR Product p,0.005,0.005,output/tables,True
 Table VI (F1),class 1 BN Core F1,0.53,0.526,output/tables,True
-Table VI (Cliff's d),class 1 BN Core d,-0.70,-0.7,output/tables,True
+Table VI (Cliff's d),class 1 BN Core d,-0.86,-0.86,output/tables,True
 Table VI (p),class 1 BN Core p,0.001,0.001,output/tables,True
 Table VI (F1),class 1 BN Product F1,0.58,0.584,output/tables,True
-Table VI (Cliff's d),class 1 BN Product d,-0.56,-0.56,output/tables,True
-Table VI (p),class 1 BN Product p,0.002,0.002,output/tables,True
+Table VI (Cliff's d),class 1 BN Product d,-0.32,-0.32,output/tables,True
+Table VI (p),class 1 BN Product p,0.030,0.03,output/tables,True
 Table VI (F1),class 1 LiNGAM-BN Core F1,0.40,0.395,output/tables,True
-Table VI (Cliff's d),class 1 LiNGAM-BN Core d,-0.92,-0.92,output/tables,True
+Table VI (Cliff's d),class 1 LiNGAM-BN Core d,-1.00,-1.0,output/tables,True
 Table VI (p),class 1 LiNGAM-BN Core p,0.001,0.001,output/tables,True
 Table VI (F1),class 1 LiNGAM-BN Product F1,0.50,0.504,output/tables,True
-Table VI (Cliff's d),class 1 LiNGAM-BN Product d,-0.83,-0.83,output/tables,True
+Table VI (Cliff's d),class 1 LiNGAM-BN Product d,-0.74,-0.74,output/tables,True
 Table VI (p),class 1 LiNGAM-BN Product p,0.001,0.001,output/tables,True
 Table VI (F1),class 1 Refined LiNGAM-BN Core F1,0.51,0.509,output/tables,True
-Table VI (Cliff's d),class 1 Refined LiNGAM-BN Core d,-0.78,-0.78,output/tables,True
+Table VI (Cliff's d),class 1 Refined LiNGAM-BN Core d,-0.92,-0.92,output/tables,True
 Table VI (p),class 1 Refined LiNGAM-BN Core p,0.001,0.001,output/tables,True
 Table VI (F1),class 1 Refined LiNGAM-BN Product F1,0.57,0.567,output/tables,True
-Table VI (Cliff's d),class 1 Refined LiNGAM-BN Product d,-0.69,-0.69,output/tables,True
-Table VI (p),class 1 Refined LiNGAM-BN Product p,0.001,0.001,output/tables,True
-Table VI (F1),class 2 RF Core F1,0.47,0.472,output/tables,True
-Table VI (F1),class 2 RF Product F1,0.44,0.439,output/tables,True
-Table VI (F1),class 2 LR Core F1,0.43,0.427,output/tables,True
-Table VI (Cliff's d),class 2 LR Core d,-0.58,-0.58,output/tables,True
-Table VI (p),class 2 LR Core p,0.029,0.029,output/tables,True
-Table VI (F1),class 2 LR Product F1,0.33,0.327,output/tables,True
-Table VI (Cliff's d),class 2 LR Product d,-0.54,-0.54,output/tables,True
-Table VI (p),class 2 LR Product p,0.004,0.004,output/tables,True
+Table VI (Cliff's d),class 1 Refined LiNGAM-BN Product d,-0.43,-0.43,output/tables,True
+Table VI (p),class 1 Refined LiNGAM-BN Product p,0.007,0.007,output/tables,True
+Table VI (F1),class 2 RF Core F1,0.44,0.442,output/tables,True
+Table VI (F1),class 2 RF Product F1,0.43,0.432,output/tables,True
+Table VI (F1),class 2 LR Core F1,0.38,0.38,output/tables,True
+Table VI (Cliff's d),class 2 LR Core d,-0.74,-0.74,output/tables,True
+Table VI (p),class 2 LR Core p,0.005,0.005,output/tables,True
+Table VI (F1),class 2 LR Product F1,0.32,0.324,output/tables,True
+Table VI (Cliff's d),class 2 LR Product d,-0.50,-0.5,output/tables,True
+Table VI (p),class 2 LR Product p,0.013,0.013,output/tables,True
 Table VI (F1),class 2 BN Core F1,0.35,0.353,output/tables,True
-Table VI (Cliff's d),class 2 BN Core d,-0.84,-0.84,output/tables,True
+Table VI (Cliff's d),class 2 BN Core d,-0.69,-0.69,output/tables,True
 Table VI (p),class 2 BN Core p,0.001,0.001,output/tables,True
 Table VI (F1),class 2 BN Product F1,0.39,0.392,output/tables,True
-Table VI (Cliff's d),class 2 BN Product d,-0.25,-0.25,output/tables,True
-Table VI (p),class 2 BN Product p,0.258,0.258,output/tables,True
+Table VI (Cliff's d),class 2 BN Product d,-0.16,-0.16,output/tables,True
+Table VI (p),class 2 BN Product p,0.343,0.343,output/tables,True
 Table VI (F1),class 2 LiNGAM-BN Core F1,0.34,0.341,output/tables,True
-Table VI (Cliff's d),class 2 LiNGAM-BN Core d,-1.00,-1.0,output/tables,True
+Table VI (Cliff's d),class 2 LiNGAM-BN Core d,-0.82,-0.82,output/tables,True
 Table VI (p),class 2 LiNGAM-BN Core p,0.001,0.001,output/tables,True
 Table VI (F1),class 2 LiNGAM-BN Product F1,0.32,0.319,output/tables,True
-Table VI (Cliff's d),class 2 LiNGAM-BN Product d,-0.58,-0.58,output/tables,True
-Table VI (p),class 2 LiNGAM-BN Product p,0.009,0.009,output/tables,True
+Table VI (Cliff's d),class 2 LiNGAM-BN Product d,-0.52,-0.52,output/tables,True
+Table VI (p),class 2 LiNGAM-BN Product p,0.006,0.006,output/tables,True
 Table VI (F1),class 2 Refined LiNGAM-BN Core F1,0.36,0.359,output/tables,True
-Table VI (Cliff's d),class 2 Refined LiNGAM-BN Core d,-0.94,-0.94,output/tables,True
+Table VI (Cliff's d),class 2 Refined LiNGAM-BN Core d,-0.76,-0.76,output/tables,True
 Table VI (p),class 2 Refined LiNGAM-BN Core p,0.001,0.001,output/tables,True
 Table VI (F1),class 2 Refined LiNGAM-BN Product F1,0.36,0.362,output/tables,True
-Table VI (Cliff's d),class 2 Refined LiNGAM-BN Product d,-0.38,-0.38,output/tables,True
-Table VI (p),class 2 Refined LiNGAM-BN Product p,0.063,0.063,output/tables,True
-Table VI (F1),class 3 RF Core F1,0.44,0.444,output/tables,True
-Table VI (F1),class 3 RF Product F1,0.34,0.343,output/tables,True
-Table VI (F1),class 3 LR Core F1,0.31,0.306,output/tables,True
-Table VI (Cliff's d),class 3 LR Core d,-0.92,-0.92,output/tables,True
+Table VI (Cliff's d),class 2 Refined LiNGAM-BN Product d,-0.32,-0.32,output/tables,True
+Table VI (p),class 2 Refined LiNGAM-BN Product p,0.100,0.1,output/tables,True
+Table VI (F1),class 3 RF Core F1,0.41,0.408,output/tables,True
+Table VI (F1),class 3 RF Product F1,0.36,0.364,output/tables,True
+Table VI (F1),class 3 LR Core F1,0.28,0.282,output/tables,True
+Table VI (Cliff's d),class 3 LR Core d,-0.86,-0.86,output/tables,True
 Table VI (p),class 3 LR Core p,0.001,0.001,output/tables,True
-Table VI (F1),class 3 LR Product F1,0.09,0.09,output/tables,True
-Table VI (Cliff's d),class 3 LR Product d,-0.86,-0.86,output/tables,True
+Table VI (F1),class 3 LR Product F1,0.09,0.091,output/tables,True
+Table VI (Cliff's d),class 3 LR Product d,-0.96,-0.96,output/tables,True
 Table VI (p),class 3 LR Product p,0.001,0.001,output/tables,True
 Table VI (F1),class 3 BN Core F1,0.36,0.361,output/tables,True
-Table VI (Cliff's d),class 3 BN Core d,-0.64,-0.64,output/tables,True
-Table VI (p),class 3 BN Core p,0.001,0.001,output/tables,True
+Table VI (Cliff's d),class 3 BN Core d,-0.36,-0.36,output/tables,True
+Table VI (p),class 3 BN Core p,0.035,0.035,output/tables,True
 Table VI (F1),class 3 BN Product F1,0.38,0.383,output/tables,True
-Table VI (Cliff's d),class 3 BN Product d,0.26,0.26,output/tables,True
-Table VI (p),class 3 BN Product p,0.251,0.251,output/tables,True
+Table VI (Cliff's d),class 3 BN Product d,0.12,0.12,output/tables,True
+Table VI (p),class 3 BN Product p,0.594,0.594,output/tables,True
 Table VI (F1),class 3 LiNGAM-BN Core F1,0.32,0.322,output/tables,True
-Table VI (Cliff's d),class 3 LiNGAM-BN Core d,-0.88,-0.88,output/tables,True
-Table VI (p),class 3 LiNGAM-BN Core p,0.001,0.001,output/tables,True
+Table VI (Cliff's d),class 3 LiNGAM-BN Core d,-0.80,-0.8,output/tables,True
+Table VI (p),class 3 LiNGAM-BN Core p,0.002,0.002,output/tables,True
 Table VI (F1),class 3 LiNGAM-BN Product F1,0.16,0.162,output/tables,True
-Table VI (Cliff's d),class 3 LiNGAM-BN Product d,-0.78,-0.78,output/tables,True
+Table VI (Cliff's d),class 3 LiNGAM-BN Product d,-0.81,-0.81,output/tables,True
 Table VI (p),class 3 LiNGAM-BN Product p,0.001,0.001,output/tables,True
 Table VI (F1),class 3 Refined LiNGAM-BN Core F1,0.36,0.357,output/tables,True
-Table VI (Cliff's d),class 3 Refined LiNGAM-BN Core d,-0.77,-0.77,output/tables,True
-Table VI (p),class 3 Refined LiNGAM-BN Core p,0.001,0.001,output/tables,True
+Table VI (Cliff's d),class 3 Refined LiNGAM-BN Core d,-0.52,-0.52,output/tables,True
+Table VI (p),class 3 Refined LiNGAM-BN Core p,0.020,0.02,output/tables,True
 Table VI (F1),class 3 Refined LiNGAM-BN Product F1,0.38,0.376,output/tables,True
-Table VI (Cliff's d),class 3 Refined LiNGAM-BN Product d,0.17,0.17,output/tables,True
-Table VI (p),class 3 Refined LiNGAM-BN Product p,0.336,0.336,output/tables,True
-Table VI (F1),class 4 RF Core F1,0.61,0.606,output/tables,True
-Table VI (F1),class 4 RF Product F1,0.62,0.624,output/tables,True
-Table VI (F1),class 4 LR Core F1,0.47,0.475,output/tables,True
-Table VI (Cliff's d),class 4 LR Core d,-0.89,-0.89,output/tables,True
+Table VI (Cliff's d),class 3 Refined LiNGAM-BN Product d,0.08,0.08,output/tables,True
+Table VI (p),class 3 Refined LiNGAM-BN Product p,0.714,0.714,output/tables,True
+Table VI (F1),class 4 RF Core F1,0.58,0.578,output/tables,True
+Table VI (F1),class 4 RF Product F1,0.61,0.615,output/tables,True
+Table VI (F1),class 4 LR Core F1,0.47,0.47,output/tables,True
+Table VI (Cliff's d),class 4 LR Core d,-0.74,-0.74,output/tables,True
 Table VI (p),class 4 LR Core p,0.001,0.001,output/tables,True
-Table VI (F1),class 4 LR Product F1,0.54,0.539,output/tables,True
-Table VI (Cliff's d),class 4 LR Product d,-0.40,-0.4,output/tables,True
-Table VI (p),class 4 LR Product p,0.007,0.007,output/tables,True
+Table VI (F1),class 4 LR Product F1,0.53,0.53,output/tables,True
+Table VI (Cliff's d),class 4 LR Product d,-0.31,-0.31,output/tables,True
+Table VI (p),class 4 LR Product p,0.005,0.005,output/tables,True
 Table VI (F1),class 4 BN Core F1,0.53,0.533,output/tables,True
-Table VI (Cliff's d),class 4 BN Core d,-0.56,-0.56,output/tables,True
-Table VI (p),class 4 BN Core p,0.001,0.001,output/tables,True
+Table VI (Cliff's d),class 4 BN Core d,-0.39,-0.39,output/tables,True
+Table VI (p),class 4 BN Core p,0.011,0.011,output/tables,True
 Table VI (F1),class 4 BN Product F1,0.57,0.571,output/tables,True
-Table VI (Cliff's d),class 4 BN Product d,-0.39,-0.39,output/tables,True
-Table VI (p),class 4 BN Product p,0.052,0.052,output/tables,True
+Table VI (Cliff's d),class 4 BN Product d,-0.40,-0.4,output/tables,True
+Table VI (p),class 4 BN Product p,0.072,0.072,output/tables,True
 Table VI (F1),class 4 LiNGAM-BN Core F1,0.34,0.335,output/tables,True
-Table VI (Cliff's d),class 4 LiNGAM-BN Core d,-1.00,-1.0,output/tables,True
+Table VI (Cliff's d),class 4 LiNGAM-BN Core d,-0.98,-0.98,output/tables,True
 Table VI (p),class 4 LiNGAM-BN Core p,0.001,0.001,output/tables,True
 Table VI (F1),class 4 LiNGAM-BN Product F1,0.37,0.368,output/tables,True
-Table VI (Cliff's d),class 4 LiNGAM-BN Product d,-1.00,-1.0,output/tables,True
+Table VI (Cliff's d),class 4 LiNGAM-BN Product d,-0.93,-0.93,output/tables,True
 Table VI (p),class 4 LiNGAM-BN Product p,0.001,0.001,output/tables,True
 Table VI (F1),class 4 Refined LiNGAM-BN Core F1,0.53,0.526,output/tables,True
-Table VI (Cliff's d),class 4 Refined LiNGAM-BN Core d,-0.78,-0.78,output/tables,True
-Table VI (p),class 4 Refined LiNGAM-BN Core p,0.001,0.001,output/tables,True
+Table VI (Cliff's d),class 4 Refined LiNGAM-BN Core d,-0.50,-0.5,output/tables,True
+Table VI (p),class 4 Refined LiNGAM-BN Core p,0.006,0.006,output/tables,True
 Table VI (F1),class 4 Refined LiNGAM-BN Product F1,0.54,0.543,output/tables,True
-Table VI (Cliff's d),class 4 Refined LiNGAM-BN Product d,-0.46,-0.46,output/tables,True
-Table VI (p),class 4 Refined LiNGAM-BN Product p,0.005,0.005,output/tables,True
-Table VII,LR Core Accuracy,0.657,0.657,output/tables,True
-Table VII,LR Core Macro-F1,0.647,0.647,output/tables,True
-Table VII,LR Product Accuracy,0.681,0.681,output/tables,True
-Table VII,LR Product Macro-F1,0.678,0.678,output/tables,True
-Table VII,RF Core Accuracy,0.743,0.743,output/tables,True
-Table VII,RF Core Macro-F1,0.741,0.741,output/tables,True
-Table VII,RF Product Accuracy,0.751,0.751,output/tables,True
-Table VII,RF Product Macro-F1,0.751,0.751,output/tables,True
-Table VII,BN Core Accuracy,0.707,0.707,output/tables,True
-Table VII,BN Core Macro-F1,0.702,0.702,output/tables,True
-Table VII,BN Product Accuracy,0.734,0.734,output/tables,True
-Table VII,BN Product Macro-F1,0.731,0.731,output/tables,True
+Table VI (Cliff's d),class 4 Refined LiNGAM-BN Product d,-0.52,-0.52,output/tables,True
+Table VI (p),class 4 Refined LiNGAM-BN Product p,0.004,0.004,output/tables,True
+Table VII,LR Core Accuracy,0.655,0.655,output/tables,True
+Table VII,LR Core Macro-F1,0.645,0.645,output/tables,True
+Table VII,LR Product Accuracy,0.678,0.678,output/tables,True
+Table VII,LR Product Macro-F1,0.675,0.675,output/tables,True
+Table VII,RF Core Accuracy,0.726,0.726,output/tables,True
+Table VII,RF Core Macro-F1,0.725,0.725,output/tables,True
+Table VII,RF Product Accuracy,0.728,0.728,output/tables,True
+Table VII,RF Product Macro-F1,0.728,0.728,output/tables,True
+Table VII,BN Core Accuracy,0.706,0.706,output/tables,True
+Table VII,BN Core Macro-F1,0.701,0.701,output/tables,True
+Table VII,BN Product Accuracy,0.728,0.728,output/tables,True
+Table VII,BN Product Macro-F1,0.726,0.726,output/tables,True
 Table VII,LiNGAM+LR Core Accuracy,0.653,0.653,output/tables,True
 Table VII,LiNGAM+LR Core Macro-F1,0.643,0.643,output/tables,True
 Table VII,LiNGAM+LR Product Accuracy,0.617,0.617,output/tables,True
@@ -495,110 +495,110 @@ Table VII,Refined LiNGAM-BN Product Macro-F1,0.710,0.71,output/tables,True
 Table VII,Majority baseline Core Accuracy,0.522,0.522,output/tables,True
 Table VII,Majority baseline Product Accuracy,0.525,0.525,output/tables,True
 Table VIII,Core 1d Majority accuracy,0.750,0.75,output/tables,True
-Table VIII,Core 1d RF macro-F1,0.756,0.756,output/tables,True
-Table VIII,Core 1d LR macro-F1,0.660,0.66,output/tables,True
-Table VIII,Core 1d BN macro-F1,0.592,0.592,output/tables,True
+Table VIII,Core 1d RF macro-F1,0.746,0.746,output/tables,True
+Table VIII,Core 1d LR macro-F1,0.661,0.661,output/tables,True
+Table VIII,Core 1d BN macro-F1,0.598,0.598,output/tables,True
 Table VIII,Core 1d LiNGAM-BN macro-F1,0.434,0.434,output/tables,True
 Table VIII,Core 1d Refined LiNGAM-BN macro-F1,0.429,0.429,output/tables,True
 Table VIII,Product 1d Majority accuracy,0.718,0.718,output/tables,True
-Table VIII,Product 1d RF macro-F1,0.774,0.774,output/tables,True
+Table VIII,Product 1d RF macro-F1,0.765,0.765,output/tables,True
 Table VIII,Product 1d LR macro-F1,0.719,0.719,output/tables,True
 Table VIII,Product 1d BN macro-F1,0.656,0.656,output/tables,True
 Table VIII,Product 1d LiNGAM-BN macro-F1,0.481,0.481,output/tables,True
 Table VIII,Product 1d Refined LiNGAM-BN macro-F1,0.418,0.418,output/tables,True
 Table VIII,Core 2d Majority accuracy,0.674,0.674,output/tables,True
-Table VIII,Core 2d RF macro-F1,0.737,0.737,output/tables,True
-Table VIII,Core 2d LR macro-F1,0.692,0.692,output/tables,True
+Table VIII,Core 2d RF macro-F1,0.733,0.733,output/tables,True
+Table VIII,Core 2d LR macro-F1,0.687,0.687,output/tables,True
 Table VIII,Core 2d BN macro-F1,0.670,0.67,output/tables,True
 Table VIII,Core 2d LiNGAM-BN macro-F1,0.422,0.422,output/tables,True
 Table VIII,Core 2d Refined LiNGAM-BN macro-F1,0.636,0.636,output/tables,True
 Table VIII,Product 2d Majority accuracy,0.653,0.653,output/tables,True
-Table VIII,Product 2d RF macro-F1,0.752,0.752,output/tables,True
+Table VIII,Product 2d RF macro-F1,0.745,0.745,output/tables,True
 Table VIII,Product 2d LR macro-F1,0.712,0.712,output/tables,True
 Table VIII,Product 2d BN macro-F1,0.696,0.696,output/tables,True
 Table VIII,Product 2d LiNGAM-BN macro-F1,0.529,0.529,output/tables,True
 Table VIII,Product 2d Refined LiNGAM-BN macro-F1,0.679,0.679,output/tables,True
 Table VIII,Core 3d Majority accuracy,0.626,0.626,output/tables,True
-Table VIII,Core 3d RF macro-F1,0.730,0.73,output/tables,True
-Table VIII,Core 3d LR macro-F1,0.697,0.697,output/tables,True
+Table VIII,Core 3d RF macro-F1,0.736,0.736,output/tables,True
+Table VIII,Core 3d LR macro-F1,0.695,0.695,output/tables,True
 Table VIII,Core 3d BN macro-F1,0.687,0.687,output/tables,True
 Table VIII,Core 3d LiNGAM-BN macro-F1,0.545,0.545,output/tables,True
 Table VIII,Core 3d Refined LiNGAM-BN macro-F1,0.642,0.642,output/tables,True
 Table VIII,Product 3d Majority accuracy,0.592,0.592,output/tables,True
-Table VIII,Product 3d RF macro-F1,0.736,0.736,output/tables,True
-Table VIII,Product 3d LR macro-F1,0.674,0.674,output/tables,True
+Table VIII,Product 3d RF macro-F1,0.722,0.722,output/tables,True
+Table VIII,Product 3d LR macro-F1,0.677,0.677,output/tables,True
 Table VIII,Product 3d BN macro-F1,0.711,0.711,output/tables,True
 Table VIII,Product 3d LiNGAM-BN macro-F1,0.561,0.561,output/tables,True
 Table VIII,Product 3d Refined LiNGAM-BN macro-F1,0.678,0.678,output/tables,True
 Table VIII,Core 4d Majority accuracy,0.578,0.578,output/tables,True
-Table VIII,Core 4d RF macro-F1,0.745,0.745,output/tables,True
+Table VIII,Core 4d RF macro-F1,0.735,0.735,output/tables,True
 Table VIII,Core 4d LR macro-F1,0.688,0.688,output/tables,True
-Table VIII,Core 4d BN macro-F1,0.698,0.698,output/tables,True
+Table VIII,Core 4d BN macro-F1,0.696,0.696,output/tables,True
 Table VIII,Core 4d LiNGAM-BN macro-F1,0.544,0.544,output/tables,True
 Table VIII,Core 4d Refined LiNGAM-BN macro-F1,0.662,0.662,output/tables,True
 Table VIII,Product 4d Majority accuracy,0.553,0.553,output/tables,True
-Table VIII,Product 4d RF macro-F1,0.736,0.736,output/tables,True
-Table VIII,Product 4d LR macro-F1,0.684,0.684,output/tables,True
-Table VIII,Product 4d BN macro-F1,0.706,0.706,output/tables,True
+Table VIII,Product 4d RF macro-F1,0.720,0.72,output/tables,True
+Table VIII,Product 4d LR macro-F1,0.679,0.679,output/tables,True
+Table VIII,Product 4d BN macro-F1,0.726,0.726,output/tables,True
 Table VIII,Product 4d LiNGAM-BN macro-F1,0.601,0.601,output/tables,True
 Table VIII,Product 4d Refined LiNGAM-BN macro-F1,0.680,0.68,output/tables,True
 Table VIII,Core 5d Majority accuracy,0.536,0.536,output/tables,True
-Table VIII,Core 5d RF macro-F1,0.749,0.749,output/tables,True
-Table VIII,Core 5d LR macro-F1,0.684,0.684,output/tables,True
-Table VIII,Core 5d BN macro-F1,0.705,0.705,output/tables,True
+Table VIII,Core 5d RF macro-F1,0.731,0.731,output/tables,True
+Table VIII,Core 5d LR macro-F1,0.674,0.674,output/tables,True
+Table VIII,Core 5d BN macro-F1,0.697,0.697,output/tables,True
 Table VIII,Core 5d LiNGAM-BN macro-F1,0.594,0.594,output/tables,True
 Table VIII,Core 5d Refined LiNGAM-BN macro-F1,0.686,0.686,output/tables,True
 Table VIII,Product 5d Majority accuracy,0.526,0.526,output/tables,True
-Table VIII,Product 5d RF macro-F1,0.758,0.758,output/tables,True
-Table VIII,Product 5d LR macro-F1,0.681,0.681,output/tables,True
-Table VIII,Product 5d BN macro-F1,0.718,0.718,output/tables,True
+Table VIII,Product 5d RF macro-F1,0.727,0.727,output/tables,True
+Table VIII,Product 5d LR macro-F1,0.671,0.671,output/tables,True
+Table VIII,Product 5d BN macro-F1,0.723,0.723,output/tables,True
 Table VIII,Product 5d LiNGAM-BN macro-F1,0.644,0.644,output/tables,True
 Table VIII,Product 5d Refined LiNGAM-BN macro-F1,0.697,0.697,output/tables,True
 Table VIII,Core 7d Majority accuracy,0.522,0.522,output/tables,True
-Table VIII,Core 7d RF macro-F1,0.741,0.741,output/tables,True
-Table VIII,Core 7d LR macro-F1,0.647,0.647,output/tables,True
-Table VIII,Core 7d BN macro-F1,0.702,0.702,output/tables,True
+Table VIII,Core 7d RF macro-F1,0.725,0.725,output/tables,True
+Table VIII,Core 7d LR macro-F1,0.645,0.645,output/tables,True
+Table VIII,Core 7d BN macro-F1,0.701,0.701,output/tables,True
 Table VIII,Core 7d LiNGAM-BN macro-F1,0.603,0.603,output/tables,True
 Table VIII,Core 7d Refined LiNGAM-BN macro-F1,0.666,0.666,output/tables,True
 Table VIII,Product 7d Majority accuracy,0.525,0.525,output/tables,True
-Table VIII,Product 7d RF macro-F1,0.751,0.751,output/tables,True
-Table VIII,Product 7d LR macro-F1,0.678,0.678,output/tables,True
-Table VIII,Product 7d BN macro-F1,0.731,0.731,output/tables,True
+Table VIII,Product 7d RF macro-F1,0.728,0.728,output/tables,True
+Table VIII,Product 7d LR macro-F1,0.675,0.675,output/tables,True
+Table VIII,Product 7d BN macro-F1,0.726,0.726,output/tables,True
 Table VIII,Product 7d LiNGAM-BN macro-F1,0.615,0.615,output/tables,True
 Table VIII,Product 7d Refined LiNGAM-BN macro-F1,0.710,0.71,output/tables,True
 Table VIII,Core 9d Majority accuracy,0.571,0.571,output/tables,True
-Table VIII,Core 9d RF macro-F1,0.741,0.741,output/tables,True
-Table VIII,Core 9d LR macro-F1,0.644,0.644,output/tables,True
-Table VIII,Core 9d BN macro-F1,0.705,0.705,output/tables,True
+Table VIII,Core 9d RF macro-F1,0.726,0.726,output/tables,True
+Table VIII,Core 9d LR macro-F1,0.645,0.645,output/tables,True
+Table VIII,Core 9d BN macro-F1,0.704,0.704,output/tables,True
 Table VIII,Core 9d LiNGAM-BN macro-F1,0.601,0.601,output/tables,True
 Table VIII,Core 9d Refined LiNGAM-BN macro-F1,0.678,0.678,output/tables,True
 Table VIII,Product 9d Majority accuracy,0.568,0.568,output/tables,True
-Table VIII,Product 9d RF macro-F1,0.751,0.751,output/tables,True
-Table VIII,Product 9d LR macro-F1,0.682,0.682,output/tables,True
+Table VIII,Product 9d RF macro-F1,0.737,0.737,output/tables,True
+Table VIII,Product 9d LR macro-F1,0.670,0.67,output/tables,True
 Table VIII,Product 9d BN macro-F1,0.731,0.731,output/tables,True
 Table VIII,Product 9d LiNGAM-BN macro-F1,0.632,0.632,output/tables,True
 Table VIII,Product 9d Refined LiNGAM-BN macro-F1,0.703,0.703,output/tables,True
 Table VIII,Core 14d Majority accuracy,0.655,0.655,output/tables,True
-Table VIII,Core 14d RF macro-F1,0.731,0.731,output/tables,True
-Table VIII,Core 14d LR macro-F1,0.618,0.618,output/tables,True
-Table VIII,Core 14d BN macro-F1,0.711,0.711,output/tables,True
+Table VIII,Core 14d RF macro-F1,0.723,0.723,output/tables,True
+Table VIII,Core 14d LR macro-F1,0.604,0.604,output/tables,True
+Table VIII,Core 14d BN macro-F1,0.709,0.709,output/tables,True
 Table VIII,Core 14d LiNGAM-BN macro-F1,0.583,0.583,output/tables,True
 Table VIII,Core 14d Refined LiNGAM-BN macro-F1,0.690,0.69,output/tables,True
 Table VIII,Product 14d Majority accuracy,0.621,0.621,output/tables,True
-Table VIII,Product 14d RF macro-F1,0.762,0.762,output/tables,True
-Table VIII,Product 14d LR macro-F1,0.669,0.669,output/tables,True
-Table VIII,Product 14d BN macro-F1,0.716,0.716,output/tables,True
+Table VIII,Product 14d RF macro-F1,0.741,0.741,output/tables,True
+Table VIII,Product 14d LR macro-F1,0.641,0.641,output/tables,True
+Table VIII,Product 14d BN macro-F1,0.711,0.711,output/tables,True
 Table VIII,Product 14d LiNGAM-BN macro-F1,0.594,0.594,output/tables,True
 Table VIII,Product 14d Refined LiNGAM-BN macro-F1,0.692,0.692,output/tables,True
 Table VIII,Core 30d Majority accuracy,0.781,0.781,output/tables,True
-Table VIII,Core 30d RF macro-F1,0.735,0.735,output/tables,True
-Table VIII,Core 30d LR macro-F1,0.553,0.553,output/tables,True
+Table VIII,Core 30d RF macro-F1,0.729,0.729,output/tables,True
+Table VIII,Core 30d LR macro-F1,0.563,0.563,output/tables,True
 Table VIII,Core 30d BN macro-F1,0.711,0.711,output/tables,True
 Table VIII,Core 30d LiNGAM-BN macro-F1,0.549,0.549,output/tables,True
 Table VIII,Core 30d Refined LiNGAM-BN macro-F1,0.688,0.688,output/tables,True
 Table VIII,Product 30d Majority accuracy,0.741,0.741,output/tables,True
-Table VIII,Product 30d RF macro-F1,0.739,0.739,output/tables,True
-Table VIII,Product 30d LR macro-F1,0.621,0.621,output/tables,True
+Table VIII,Product 30d RF macro-F1,0.713,0.713,output/tables,True
+Table VIII,Product 30d LR macro-F1,0.602,0.602,output/tables,True
 Table VIII,Product 30d BN macro-F1,0.695,0.695,output/tables,True
 Table VIII,Product 30d LiNGAM-BN macro-F1,0.542,0.542,output/tables,True
 Table VIII,Product 30d Refined LiNGAM-BN macro-F1,0.680,0.68,output/tables,True
